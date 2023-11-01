@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "title": "My First Post",
+      "author": "Tristan Setha",
+      "date": "2023-10-23",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "tags": "project"
+    }
+  ]
+}
