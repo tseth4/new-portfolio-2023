@@ -13,8 +13,13 @@
     right: 0;
     left: 0;
     top: 0;
-    height: fit-content;
+    height: var(--top-nav-height);
     border: 1px solid pink;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 4rem;
   }
 
 }
