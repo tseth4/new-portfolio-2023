@@ -12,16 +12,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const bodyStyle={
-    background: 'var(--background)',
-    color: 'var(--primary-text-color)'
-  }
-  
+  const bodyStyle = {
+    background: "var(--background)",
+    color: "var(--primary-text-color)",
+  };
+
   return (
     <html lang="en">
-      <body data-theme="dark" style={bodyStyle}>
-        {children}
-      </body>
+      <body data-theme="dark" style={bodyStyle}>{children}</body>
     </html>
   );
 }

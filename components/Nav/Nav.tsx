@@ -7,23 +7,25 @@ import { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
 export default function Nav() {
-  const [activeTheme, setActiveTheme] = useState("light");
+  const [activeTheme, setActiveTheme] = useState("dark");
   const inactiveTheme = activeTheme === "light" ? "dark" : "light";
 
   useEffect(() => {
     document.body.dataset.theme = activeTheme;
   }, [activeTheme]);
 
-  const myElement = useRef(null);
+  // const myElement = useRef(null);
 
-  // const myElement = document.querySelector(".nav-side");
-  gsap.to(myElement.current, {
-    duration: 1,
-    x: 100,
-  });
+  // // const myElement = document.querySelector(".nav-side");
+  // gsap.to(myElement.current, {
+  //   duration: 1,
+  //   x: 100,
+  // });
   return (
     <>
-      <div ref={myElement} className="nav-side">
+      <div 
+      // ref={myElement} 
+      className="nav-side">
         side nav
       </div>
       <div className="nav-top">
