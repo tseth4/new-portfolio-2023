@@ -1,10 +1,14 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import "./HomeStyles.scss";
+import Nav from "@/components/Nav/Nav";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      Hello World!
+    <main className="home">
+      <Nav />
+      <div className="home__splash">Splash</div>
+      <div className="home__posts-feed">Posts</div>
+      <div className="home__posts-about">Posts</div>
     </main>
-  )
+  );
 }
