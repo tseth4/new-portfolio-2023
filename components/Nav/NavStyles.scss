@@ -17,9 +17,13 @@
     border: 1px solid pink;
 
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding-right: 4rem;
+    &__icon-container {
+      cursor: pointer;
+      // border: 1px solid white;
+    }
   }
 
 }
