@@ -7,8 +7,25 @@
   font-weight: 800;
   font-size: 10rem;
   position: relative;
+  z-index: -1;
+
   &__image {
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
+    width: 838px;
+    height: 838px;
+
+    display: none;
+
+    // @media (min-width: 1250px) {
+    //   width: 638px;
+    //   height: 638px;
+    // }
+
+    svg {
+      width: 95%;
+      height: 95%;
+      border: 1px solid pink;
+    }
   }
 }

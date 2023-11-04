@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <main className="home">
       <Nav />
-      <div className="home__splash">
+      <div id="home" className="home__splash">
         <Splash/>
       </div>
-      <div className="home__posts-feed">Posts</div>
-      <div className="home__posts-about">Posts</div>
+      <div id="posts" className="home__posts-feed">Posts</div>
+      <div id="about" className="home__posts-about">About</div>
     </main>
   );
 }
