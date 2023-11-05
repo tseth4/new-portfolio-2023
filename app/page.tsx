@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import "./HomeStyles.scss";
 import Nav from "@/components/Nav/Nav";
 import Splash from "@/components/Splash/Splash";

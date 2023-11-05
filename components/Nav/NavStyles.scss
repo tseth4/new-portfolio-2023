@@ -13,12 +13,12 @@
 
     bottom: auto;
     flex-direction: row;
-
-    flex-direction: column;
+    gap: 1.25em;
     width: fit-content;
     // gap: 2rem;
     align-items: center;
     z-index: 1;
+
 
 
     &__item {
@@ -79,6 +79,7 @@
     justify-content: flex-end;
     align-items: center;
     padding-right: 2rem;
+    background: var(--background);
 
     &__icon-container {
       cursor: pointer;

@@ -14,7 +14,7 @@
     height: 100vh;
     width: 100%;
     border: 1px solid purple;
-
+    padding-top: var(--top-nav-height);
     padding-left: 0;
   }
 
@@ -22,7 +22,9 @@
     justify-content: start;
     gap: 2em;
     align-items: start;
-    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    
   }
 
 }
