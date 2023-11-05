@@ -18,4 +18,11 @@
     padding-left: 0;
   }
 
+  &__posts-feed {
+    justify-content: start;
+    gap: 2em;
+    align-items: start;
+    padding: 2em;
+  }
+
 }
