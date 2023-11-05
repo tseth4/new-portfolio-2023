@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./HomeStyles.scss";
 import Nav from "@/components/Nav/Nav";
 import Splash from "@/components/Splash/Splash";
+import Posts from "@/components/Posts/Posts";
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
       <div id="home" className="home__splash">
         <Splash/>
       </div>
-      <div id="posts" className="home__posts-feed">Posts</div>
+      <div id="posts" className="home__posts-feed">
+        <Posts/>
+      </div>
       <div id="about" className="home__posts-about">About</div>
     </main>
   );

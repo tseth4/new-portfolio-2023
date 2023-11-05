@@ -28,7 +28,7 @@ export default function Nav() {
     router.push(`/#${title}`);
   };
 
-  useEffect(() => {}, []);
+  // useEffect(() => {}, []);
 
   return (
     <>

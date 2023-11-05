@@ -12,8 +12,8 @@ const SplashTristan: React.FC<SplashTristanProps> = ({
 }) => {
   return (
     <svg
-      width="839"
-      height="155"
+      // width="839"
+      // height="155"
       viewBox="0 0 839 155"
       // fill="none"
       xmlns="http://www.w3.org/2000/svg"

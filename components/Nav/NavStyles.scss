@@ -1,7 +1,7 @@
 .nav {
   &-side {
     position: fixed;
-    left: 0;
+    left: 1.5rem;
     top: 0;
     bottom: 0;
     width: var(--side-nav-width);
@@ -11,12 +11,10 @@
     // align-items: flex-end;
     justify-content: center;
 
-    left: auto;
     bottom: auto;
     flex-direction: row;
 
     flex-direction: column;
-    left: 0;
     width: fit-content;
     // gap: 2rem;
     align-items: center;
@@ -43,6 +41,7 @@
         font-size: 1.25rem;
         order: -1;
         font-weight: 500;
+        cursor: pointer;
       }
 
       &-shape {
@@ -55,7 +54,7 @@
 
 
         width: 10rem;
-        height: 0.25rem;
+        height: 0.05rem;
 
         width: 100%;
         margin: 0;
@@ -79,7 +78,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 4rem;
+    padding-right: 2rem;
 
     &__icon-container {
       cursor: pointer;
