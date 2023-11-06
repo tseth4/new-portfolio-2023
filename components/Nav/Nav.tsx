@@ -3,13 +3,18 @@ import "./NavStyles.scss";
 import Image from "next/image";
 import sun_icon from "@/public/sun.svg";
 import moon_icon from "@/public/moon.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 // import { gsap } from "gsap";
 import NavData from "@/data/nav-data.json";
 import { useRouter, usePathname } from "next/navigation";
 
-export default function Nav() {
-  const router = useRouter();
+interface NavProps {
+  handleNavigation: (title: string) => void;
+  isOnScreen: string;
+}
+
+const Nav: React.FC<NavProps> = ({ handleNavigation, isOnScreen }) => {
+  // const router = useRouter();
   const pathname = usePathname();
 
   const [activeTheme, setActiveTheme] = useState("dark");
@@ -25,10 +30,13 @@ export default function Nav() {
   const handleNavClick = (title: string) => {
     console.log(title);
     setSelectedItem(title);
-    router.push(`/#${title}`);
+    handleNavigation(title);
+    // router.push(`/#${title}`);
   };
 
-  // useEffect(() => {}, []);
+  useEffect(() => {
+    setSelectedItem(isOnScreen);
+  }, [isOnScreen]);
 
   return (
     <>
@@ -87,4 +95,6 @@ export default function Nav() {
       </div>
     </>
   );
-}
+};
+
+export default Nav;

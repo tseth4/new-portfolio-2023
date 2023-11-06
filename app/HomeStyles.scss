@@ -3,13 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // padding: 6rem;
   min-height: 100vh;
-  // border: 2px solid red;
 
   &__splash,
-  &__posts-feed,
-  &__posts-about {
+  &__posts,
+  &__about {
     padding-left: var(--side-nav-width);
     height: 100vh;
     width: 100%;
@@ -18,7 +16,7 @@
     padding-left: 0;
   }
 
-  &__posts-feed {
+  &__posts- {
     justify-content: start;
     gap: 2em;
     align-items: start;
