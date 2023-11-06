@@ -1,21 +1,26 @@
 .posts {
-  &-all {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    &__title {
-      font-size: 2.75rem;
-      font-weight: 700;
-    }
-  }
-  // border: 1px solid black;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 3rem;
+  padding: 0 2.5rem;
+
+  &-all {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    &__title {
+      font-size: 2.75rem;
+      font-weight: 700;
+    }
+  }
+
+  // border: 1px solid black;
+
 
   &__card {
     // border: 2px solid red;

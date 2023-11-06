@@ -3,6 +3,7 @@ import "./HomeStyles.scss";
 import Nav from "@/components/Nav/Nav";
 import Splash from "@/components/Splash/Splash";
 import Posts from "@/components/Posts/Posts";
+import About from "@/components/About/About";
 import { useRef, RefObject, useEffect } from "react";
 import useOnScreen from "@/hooks/useOnScreen";
 
@@ -54,7 +55,7 @@ export default function Home() {
         <Posts posts={3} />
       </div>
       <div data-ref="about" ref={aboutRef} id="about" className="home__about">
-        About
+        <About/>
       </div>
     </main>
   );
