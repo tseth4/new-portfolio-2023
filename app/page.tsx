@@ -6,8 +6,13 @@ import Posts from "@/components/Posts/Posts";
 import { useRef, RefObject, useEffect } from "react";
 import useOnScreen from "@/hooks/useOnScreen";
 
-export interface OnScreenOberserverTypes {
+export interface OberserverTypes {
   [key: string]: RefObject<HTMLElement>;
+}
+
+export interface OnScreenTypes {
+  refs: OberserverTypes;
+  root?: RefObject<HTMLElement>;
 }
 
 export default function Home() {
@@ -16,15 +21,11 @@ export default function Home() {
   const homeRef = useRef<null | HTMLDivElement>(null);
 
   const isOnScreen = useOnScreen({
-    postsRef,
-    aboutRef,
-    homeRef,
+    refs: { postsRef, aboutRef, homeRef },
   });
   console.log("isOnSCreen:", isOnScreen);
 
-  useEffect(() => {
-
-  }, [isOnScreen])
+  useEffect(() => {}, [isOnScreen]);
 
   const handleNavigation = (title: string) => {
     if (title === "posts" && postsRef.current) {
@@ -50,7 +51,7 @@ export default function Home() {
         <Splash />
       </div>
       <div data-ref="posts" ref={postsRef} id="posts" className="home__posts">
-        <Posts />
+        <Posts posts={3} />
       </div>
       <div data-ref="about" ref={aboutRef} id="about" className="home__about">
         About

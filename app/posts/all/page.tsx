@@ -5,7 +5,7 @@ export default function page() {
   return (
     <div className="posts-all">
       <div className="posts-all__title"> Posts</div>
-      <Posts />
+      <Posts posts="all" />
     </div>
   );
 }
