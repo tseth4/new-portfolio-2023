@@ -1,0 +1,30 @@
+.about {
+  padding: 0 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  gap: 1.6rem;
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  &__profile-picture {
+    width: 15.3rem;
+    height: 18.46rem;
+    position: relative;
+  }
+
+  &__social-links {
+    display: flex;
+    flex-direction: row;
+  }
+}

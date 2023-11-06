@@ -1,0 +1,34 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  gap: 5rem;
+
+  &__splash,
+  &__posts,
+  &__about {
+    padding-left: var(--side-nav-width);
+    height: 100vh;
+    width: 100%;
+    // border: 1px solid purple;
+    padding-top: var(--top-nav-height);
+    padding-left: 0;
+  }
+
+  &__about {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+  &__posts- {
+    justify-content: start;
+    gap: 2em;
+    align-items: start;
+    padding-left: 2em;
+    padding-right: 2em;
+    
+  }
+
+}

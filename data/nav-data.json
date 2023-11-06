@@ -1,0 +1,16 @@
+{
+  "nav": [
+    {
+      "title": "home",
+      "route": "#home"
+    },
+    {
+      "title": "posts",
+      "route": "#posts"
+    },
+    {
+      "title": "about",
+      "route": "#about"
+    }
+  ]
+}
