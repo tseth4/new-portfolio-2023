@@ -4,17 +4,24 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  gap: 5rem;
+  gap: 10rem;
+
+  border: 3px solid pink;
+  /* margin-top: var(--top-nav-height); */
+  // position: relative;
+  // top: var(--top-nav-height);
 
   &__splash,
   &__posts,
   &__about {
     padding-left: var(--side-nav-width);
-    height: 100vh;
+    height: calc(100vh - var(--top-nav-height));
     width: 100%;
-    // border: 1px solid purple;
+    border: 4px solid greenyellow;
     padding-top: var(--top-nav-height);
     padding-left: 0;
+    // scroll-margin: 5rem 0 0 0;
+
   }
 
   &__about {

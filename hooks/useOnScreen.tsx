@@ -1,20 +1,23 @@
 import { useEffect, useState, useRef, RefObject } from "react";
 import { OnScreenTypes } from "@/app/page";
 
-export default function useOnScreen({refs, root}: OnScreenTypes) {
+export default function useOnScreen({ refs, root }: OnScreenTypes) {
   const observerRef = useRef<IntersectionObserver | null>(null);
-  const [isOnScreen, setIsOnScreen] = useState("home");
+  // const [isOnScreen, setIsOnScreen] = useState(Object.keys(refs)[0]);
+  const [isOnScreen, setIsOnScreen] = useState("splash");
+
+  console.log("root: ", root?.current)
 
   const options = {
-    rootMargin: '-50% 0px -55px 0px'
-    
+    // root: root?.current,
+    threshold: [0.51],
   };
 
   useEffect(() => {
-    // save this overserver ref to the current ref
     observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          console.log(entry, " is intersecting")
           if (entry.target.getAttribute("data-ref")) {
             let dataRefStr = entry.target.getAttribute("data-ref");
             if (dataRefStr) {

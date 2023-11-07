@@ -1,8 +1,8 @@
 {
   "nav": [
     {
-      "title": "home",
-      "route": "#home"
+      "title": "splash",
+      "route": "#splash"
     },
     {
       "title": "posts",
