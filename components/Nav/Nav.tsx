@@ -43,7 +43,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>(
 
     const handleNavClick = (title: string) => {
       console.log(title);
-      setSelectedItem(title);
+      // setSelectedItem(title);
       handleNavigation(title);
       // router.push(`/#${title}`);
     };

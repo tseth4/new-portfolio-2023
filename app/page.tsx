@@ -18,7 +18,7 @@ export interface OnScreenTypes {
 
 interface ObserverOptionTypes {
   threshold: string | number | number[];
-  root: HTMLElement | null;
+  root?: HTMLElement | null;
 }
 
 export default function Home() {
@@ -28,8 +28,8 @@ export default function Home() {
   const [isOnScreen, setIsOnScreen] = useState("splash");
   // Do I need to use useState
   const [observerOptions, setObserverOptions] = useState<ObserverOptionTypes>({
-    threshold: [0.51],
-    root: navRef?.current,
+    threshold: [0.15],
+    // root: navRef?.current,
   });
 
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -39,6 +39,9 @@ export default function Home() {
   const splashRef = useRef<null | HTMLDivElement>(null);
   const homeRef = useRef<null | HTMLDivElement>(null);
 
+  useEffect(() => {
+    setObserverOptions({ ...observerOptions, root: navRef.current });
+  }, [navRef.current]);
 
   useEffect(() => {
     setLocalRefs({
@@ -75,6 +78,7 @@ export default function Home() {
   }, [localRefs]);
 
   useEffect(() => {
+    console.log("observerOptions: ", observerOptions)
     observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
