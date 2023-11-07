@@ -5,7 +5,13 @@ export default function About() {
   return (
     <div className="about">
       <div className="about__profile-picture">
-        <Image layout="fill" objectFit="contain" src="/pp_v5.jpg" alt="ppv5" />
+        <Image
+          width={200}
+          height={200}
+          className="about__profile-picture-img"
+          src="/pp_v5.jpg"
+          alt="ppv5"
+        />
       </div>
       <h1>Hey, I’m Tristan,</h1>
       <p>
