@@ -5,6 +5,7 @@
   --breakpoint-mobile: 394px;
   --breakpoint-desktop: 1440px;
   --side-nav-width: 15rem;
+  --side-nav-margin-left: 5rem;
   --top-nav-height: 5rem;
 }
 

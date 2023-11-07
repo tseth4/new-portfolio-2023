@@ -15,12 +15,17 @@
     align-items: center;
     z-index: 1;
 
+
+
     @media (min-width: 768px) {
       flex-direction: column;
       bottom: 0;
       width: var(--side-nav-width);
       align-items: start;
       gap: 0;
+      align-items: flex-start;
+      left: 0;
+      margin-left: var(--side-nav-margin-left);
     }
     &__item {
       display: flex;

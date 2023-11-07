@@ -17,7 +17,7 @@ export interface OnScreenTypes {
 }
 
 interface ObserverOptionTypes {
-  threshold: string | number | number[];
+  threshold?: string | number | number[];
   root?: HTMLElement | null;
 }
 
@@ -28,7 +28,7 @@ export default function Home() {
   const [isOnScreen, setIsOnScreen] = useState("splash");
   // Do I need to use useState
   const [observerOptions, setObserverOptions] = useState<ObserverOptionTypes>({
-    threshold: [0.15],
+    threshold: [1],
     // root: navRef?.current,
   });
 
