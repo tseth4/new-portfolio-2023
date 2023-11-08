@@ -1,5 +1,5 @@
 .about {
-  padding: 0 4.5rem;
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,6 +7,20 @@
   text-align: center;
 
   gap: 1.6rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  &__info {
+    @media (min-width: 768px) {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
 
   h1 {
     font-size: 2.6rem;
@@ -16,7 +30,7 @@
     font-size: 1.5rem;
     font-weight: 300;
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
       width: 30rem;
     }
   }
@@ -25,15 +39,30 @@
     width: 15.3rem;
     height: 18.46rem;
     position: relative;
+
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: flex-end;
+    }
+
     &-img {
       object-fit: contain;
       width: 100%;
       height: 100%;
+
+      @media (min-width: 768px) {
+        height: fit-content;
+      }
     }
   }
 
   &__social-links {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
   }
 }
