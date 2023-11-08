@@ -78,11 +78,9 @@ export default function Home() {
   }, [localRefs]);
 
   useEffect(() => {
-    // console.log("observerOptions: ", observerOptions);
     observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(entry, " is intersecting");
           if (entry.target.getAttribute("data-ref")) {
             let dataRefStr = entry.target.getAttribute("data-ref");
             if (dataRefStr) {
