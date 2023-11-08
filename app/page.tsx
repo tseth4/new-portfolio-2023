@@ -60,9 +60,9 @@ export default function Home() {
     }
   }, []);
 
-  useEffect(() => {
-    console.log("localRefs:", localRefs);
-  }, [localRefs]);
+  // useEffect(() => {
+  //   console.log("localRefs:", localRefs);
+  // }, [localRefs]);
 
   useEffect(() => {
     // setLocalRefs({ hello: "world" });
@@ -78,7 +78,7 @@ export default function Home() {
   }, [localRefs]);
 
   useEffect(() => {
-    console.log("observerOptions: ", observerOptions)
+    // console.log("observerOptions: ", observerOptions);
     observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -95,17 +95,9 @@ export default function Home() {
   }, [observerOptions]);
 
   const handleNavigation = (title: string) => {
-    if (title === "posts" && postsRef.current) {
-      console.log(typeof postsRef.current);
-      postsRef.current.scrollIntoView({
-        behavior: "smooth",
-      });
-    } else if (title === "about" && aboutRef.current) {
-      aboutRef.current.scrollIntoView({
-        behavior: "smooth",
-      });
-    } else if (title === "splash" && homeRef.current) {
-      homeRef.current.scrollIntoView({
+    let selectedElement = localRefs[`${title}Ref`]?.current;
+    if (selectedElement) {
+      selectedElement.scrollIntoView({
         behavior: "smooth",
       });
     }
