@@ -1,6 +1,7 @@
 // import React from 'react'
 import "./AboutStyles.scss";
 import Image from "next/image";
+import AboutData from "@/data/about-data.json";
 export default function About() {
   return (
     <div className="about">
@@ -14,11 +15,8 @@ export default function About() {
         />
       </div>
       <div className="about__info">
-        <h1>Hey, I’m Tristan,</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore
-        </p>
+        <h1>{AboutData.about.h1}</h1>
+        <p>{AboutData.about.paragraph}</p>
         <div className="about__social-links">
           <div>LN</div>
           <div>CP</div>
