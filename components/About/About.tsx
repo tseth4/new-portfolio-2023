@@ -18,10 +18,17 @@ export default function About() {
         <h1>{AboutData.about.h1}</h1>
         <p>{AboutData.about.paragraph}</p>
         <div className="about__social-links">
-          <div>LN</div>
-          <div>CP</div>
-          <div>GH</div>
-          <div>CV</div>
+          {AboutData.about.social_data.map((item, index) => (
+            <div key={index}>
+              <Image
+                width={item.size.width}
+                height={item.size.height}
+                className={item.class}
+                src={item.src}
+                alt={item.alt}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

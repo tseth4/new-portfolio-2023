@@ -1,6 +1,49 @@
 {
   "about": {
+    "profile_picture": {},
     "h1": "Hey, I’m Tristan,",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore"
+    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore",
+    "social_data": [
+      {
+        "name": "linkedin",
+        "size": {
+          "width": 17,
+          "height": 16
+        },
+        "src": "/social_icons/linkedin.svg",
+        "alt": "linkedin icon",
+        "class": "about__social-links-icon"
+      },
+      {
+        "name": "codepen",
+        "size": {
+          "width": 17,
+          "height": 16
+        },
+        "src": "/social_icons/codepen.svg",
+        "alt": "codepen icon",
+        "class": "about__social-links-icon"
+      },
+      {
+        "name": "github",
+        "size": {
+          "width": 17,
+          "height": 16
+        },
+        "src": "/social_icons/github.svg",
+        "alt": "github icon",
+        "class": "about__social-links-icon"
+      },
+      {
+        "name": "cv",
+        "size": {
+          "width": 20,
+          "height": 20
+        },
+        "src": "/social_icons/cv.svg",
+        "alt": "cv icon",
+        "class": "about__social-links-icon"
+      }
+    ]
   }
 }
