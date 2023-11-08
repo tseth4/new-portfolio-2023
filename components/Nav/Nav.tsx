@@ -3,42 +3,37 @@ import "./NavStyles.scss";
 import Image from "next/image";
 import sun_icon from "@/public/sun.svg";
 import moon_icon from "@/public/moon.svg";
-import {
-  useEffect,
-  useState,
-  // useRef,
-  // useCallback,
-  // RefObject,
-  forwardRef,
-} from "react";
-// import { gsap } from "gsap";
+import { useEffect, useState, forwardRef } from "react";
 import NavData from "@/data/nav-data.json";
-import { useRouter, usePathname } from "next/navigation";
+// import { useRouter, usePathname } from "next/navigation";
 
 interface NavProps {
   handleNavigation: (title: string) => void;
   isOnScreen: string;
-  // navRef: RefObject<null | HTMLDivElement>;
 }
 
 export type Ref = HTMLDivElement;
 
 const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
   const { handleNavigation, isOnScreen } = props;
-  const pathname = usePathname();
-  const [activeTheme, setActiveTheme] = useState("dark");
-  const inactiveTheme = activeTheme === "light" ? "dark" : "light";
+  // const pathname = usePathname();
+  const [activeTheme, setActiveTheme] = useState(
+    localStorage.getItem("myTheme") ? localStorage.getItem("myTheme") : "dark"
+  );
   const [selectedItem, setSelectedItem] = useState("home");
 
-  console.log("pathname: ", pathname);
+  // console.log("pathname: ", pathname);
 
   useEffect(() => {
-    document.body.dataset.theme = activeTheme;
+    if (activeTheme) document.body.dataset.theme = activeTheme;
   }, [activeTheme]);
 
+  const handleSetActiveTheme = (theme: string) => {
+    localStorage.setItem("myTheme", theme);
+    setActiveTheme(theme);
+  };
+
   const handleNavClick = (title: string) => {
-    console.log(title);
-    // setSelectedItem(title);
     handleNavigation(title);
     // router.push(`/#${title}`);
   };
@@ -49,10 +44,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
 
   return (
     <>
-      <div
-        // ref={myElement}
-        className="nav-side"
-      >
+      <div className="nav-side">
         {NavData.nav.map((item, id) => (
           <div
             key={id}
@@ -79,11 +71,11 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
         ))}
       </div>
       <div ref={ref} className="nav-top">
-        <div
-          onClick={() => setActiveTheme(inactiveTheme)}
-          className="nav-top__icon-container"
-        >
-          {activeTheme === "light" ? (
+        {activeTheme === "light" ? (
+          <div
+            onClick={() => handleSetActiveTheme("dark")}
+            className="nav-top__icon-container"
+          >
             <Image
               priority
               width={20}
@@ -91,7 +83,12 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
               src={sun_icon}
               alt="sun icon"
             />
-          ) : (
+          </div>
+        ) : (
+          <div
+            onClick={() => handleSetActiveTheme("light")}
+            className="nav-top__icon-container"
+          >
             <Image
               priority
               width={20}
@@ -99,8 +96,8 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
               src={moon_icon}
               alt="moon icon"
             />
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </>
   );
