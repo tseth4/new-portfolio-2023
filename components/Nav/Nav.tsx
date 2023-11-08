@@ -18,7 +18,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
   const { handleNavigation, isOnScreen } = props;
   // const pathname = usePathname();
   const [activeTheme, setActiveTheme] = useState(
-    localStorage.getItem("myTheme") ? localStorage.getItem("myTheme") : "dark"
+    typeof window !== 'undefined' && localStorage.getItem("myTheme") ? localStorage.getItem("myTheme") : "dark"
   );
   const [selectedItem, setSelectedItem] = useState("home");
 
