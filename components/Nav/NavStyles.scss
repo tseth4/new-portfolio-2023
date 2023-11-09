@@ -36,9 +36,9 @@
       height: var(--top-nav-height);
       color: var(--nav-secondary-text-color);
 
-      &--selected {
-        color: var(--nav-primary-text--color);
-      }
+      // &--selected {
+      //   color: var(--nav-primary-text--color);
+      // }
 
       @media (min-width: 768px) {
         gap: 1.5rem;
