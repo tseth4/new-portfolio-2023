@@ -4,33 +4,44 @@ import Nav from "@/components/Nav/Nav";
 import Splash from "@/components/Splash/Splash";
 import Posts from "@/components/Posts/Posts";
 import About from "@/components/About/About";
-import { useRef, RefObject, useEffect, createRef, useState } from "react";
+import {
+  useRef,
+  RefObject,
+  useEffect,
+  createRef,
+  useState,
+  useLayoutEffect,
+} from "react";
 // import useOnScreen from "@/hooks/useOnScreen";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export interface OberserverTypes {
   [key: string]: RefObject<HTMLElement>;
 }
 
-export interface OnScreenTypes {
-  refs: OberserverTypes;
-  root: RefObject<HTMLElement>;
-}
+// export interface OnScreenTypes {
+//   refs: OberserverTypes;
+//   root: RefObject<HTMLElement>;
+// }
 
-interface ObserverOptionTypes {
-  threshold?: string | number | number[];
-  root?: HTMLElement | null;
-}
+// interface ObserverOptionTypes {
+//   threshold?: string | number | number[];
+//   root?: HTMLElement | null;
+// }
 
 export default function Home() {
+  // const tl = useRef(timeline);
+
   const navRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
 
   const [localRefs, setLocalRefs] = useState<OberserverTypes>({});
-  const [isOnScreen, setIsOnScreen] = useState("splash");
+  // const [isOnScreen, setIsOnScreen] = useState("");
   // Do I need to use useState
-  const [observerOptions, setObserverOptions] = useState<ObserverOptionTypes>({
-    threshold: [1],
-    // root: navRef?.current,
-  });
+  // const [observerOptions, setObserverOptions] = useState<ObserverOptionTypes>({
+  //   threshold: [1],
+  //   // root: navRef?.current,
+  // });
 
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -39,9 +50,10 @@ export default function Home() {
   const splashRef = useRef<null | HTMLDivElement>(null);
   const homeRef = useRef<null | HTMLDivElement>(null);
 
-  useEffect(() => {
-    setObserverOptions({ ...observerOptions, root: navRef.current });
-  }, [navRef.current]);
+  // useEffect(() => {
+  //   // setObserverOptions({ ...observerOptions, root: navRef.current });
+  // }, [navRef.current]);
+
 
   useEffect(() => {
     setLocalRefs({
@@ -51,48 +63,60 @@ export default function Home() {
     });
   }, [splashRef, aboutRef, postsRef]);
 
-  useEffect(() => {
-    if (navRef.current) {
-      setObserverOptions({
-        ...observerOptions,
-        root: navRef.current,
-      });
-    }
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline;
+
+    const ctx = gsap.context(() => {
+      tl({
+        scrollTrigger: {
+          trigger: postsRef.current,
+          start: "top center",
+          end: "+=5",
+          scrub: true,
+        },
+      })
+        .to(".nav-side__rectangle-shape[data-title='posts']", {
+          className:
+            "nav-side__rectangle-shape nav-side__rectangle-shape--selected",
+        }, 0)
+        .to(".nav-side__item[data-title='posts']", {
+          className: "nav-side__item nav-side__item--selected",
+        }, 0);
+      tl({
+        scrollTrigger: {
+          trigger: splashRef.current,
+          start: "top center",
+          scrub: true,
+        },
+      })
+        .to(".nav-side__rectangle-shape[data-title='splash']", {
+          className:
+            "nav-side__rectangle-shape nav-side__rectangle-shape--selected",
+        }, 0)
+        .to(".nav-side__item[data-title='splash']", {
+          className: "nav-side__item nav-side__item--selected",
+        }, 0);
+      tl({
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top center",
+          scrub: true,
+        },
+      })
+        .to(".nav-side__rectangle-shape[data-title='about']", {
+          className:
+            "nav-side__rectangle-shape nav-side__rectangle-shape--selected",
+        }, 0)
+        .to(".nav-side__item[data-title='about']", {
+          className: "nav-side__item nav-side__item--selected",
+        }, 0);
+    }, homeRef);
+    return () => ctx.revert();
   }, []);
 
-  // useEffect(() => {
-  //   console.log("localRefs:", localRefs);
-  // }, [localRefs]);
-
-  useEffect(() => {
-    // setLocalRefs({ hello: "world" });
-    for (const ref in localRefs) {
-      if (observerRef.current && localRefs[ref].current) {
-        const element: HTMLElement | null = localRefs[ref].current;
-        if (element) observerRef.current.observe(element);
-      }
-    }
-    return () => {
-      if (observerRef.current) observerRef.current.disconnect();
-    };
-  }, [localRefs]);
-
-  useEffect(() => {
-    observerRef.current = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.target.getAttribute("data-ref")) {
-            let dataRefStr = entry.target.getAttribute("data-ref");
-            if (dataRefStr) {
-              setIsOnScreen(dataRefStr);
-            }
-          }
-        }
-      }, observerOptions);
-    });
-  }, [observerOptions]);
-
   const handleNavigation = (title: string) => {
+    console.log("title: ", title);
     let selectedElement = localRefs[`${title}Ref`]?.current;
     if (selectedElement) {
       selectedElement.scrollIntoView({
@@ -105,7 +129,7 @@ export default function Home() {
     <main ref={homeRef} className="home">
       <Nav
         ref={navRef}
-        isOnScreen={isOnScreen}
+        // isOnScreen={isOnScreen}
         handleNavigation={handleNavigation}
       />
       <div

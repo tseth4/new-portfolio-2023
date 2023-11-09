@@ -3,26 +3,30 @@ import "./NavStyles.scss";
 import Image from "next/image";
 import sun_icon from "@/public/sun.svg";
 import moon_icon from "@/public/moon.svg";
-import { useEffect, useState, forwardRef } from "react";
+import { useEffect, useState, forwardRef, useLayoutEffect } from "react";
 import NavData from "@/data/nav-data.json";
 // import { useRouter, usePathname } from "next/navigation";
 
 interface NavProps {
   handleNavigation: (title: string) => void;
-  isOnScreen: string;
+  // isOnScreen: string;
 }
 
 export type Ref = HTMLDivElement;
 
 const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
-  const { handleNavigation, isOnScreen } = props;
+  const { handleNavigation } = props;
   // const pathname = usePathname();
-  const [activeTheme, setActiveTheme] = useState(
-    typeof window !== 'undefined' && localStorage.getItem("myTheme") ? localStorage.getItem("myTheme") : "dark"
-  );
+  const [activeTheme, setActiveTheme] = useState("dark");
   const [selectedItem, setSelectedItem] = useState("home");
 
   // console.log("pathname: ", pathname);
+  useLayoutEffect(() => {
+    let myTheme = localStorage.getItem("myTheme");
+    if (myTheme) {
+      setActiveTheme(myTheme);
+    }
+  }, []);
 
   useEffect(() => {
     if (activeTheme) document.body.dataset.theme = activeTheme;
@@ -38,28 +42,18 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
     // router.push(`/#${title}`);
   };
 
-  useEffect(() => {
-    setSelectedItem(isOnScreen);
-  }, [isOnScreen]);
+  // useEffect(() => {
+  //   setSelectedItem(isOnScreen);
+  // }, [isOnScreen]);
 
   return (
     <>
       <div className="nav-side">
         {NavData.nav.map((item, id) => (
-          <div
-            key={id}
-            className={
-              selectedItem === item.title
-                ? "nav-side__item nav-side__item--selected"
-                : "nav-side__item"
-            }
-          >
+          <div data-title={item.title} key={id} className={"nav-side__item"}>
             <div
-              className={
-                selectedItem === item.title
-                  ? "nav-side__rectangle-shape nav-side__rectangle-shape--selected"
-                  : "nav-side__rectangle-shape"
-              }
+              data-title={item.title}
+              className={"nav-side__rectangle-shape"}
             ></div>
             <div
               className="nav-side__rectangle-title"
@@ -90,7 +84,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
             className="nav-top__icon-container"
           >
             <Image
-              priority
+              // priority
               width={20}
               height={20}
               src={moon_icon}

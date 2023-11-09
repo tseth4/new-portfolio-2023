@@ -17,6 +17,8 @@
   font-size: 13px;
 }
 
+
+
 body[data-theme="light"] {
   --background: #FFF;
   --primary-text-color: black;
@@ -34,4 +36,9 @@ body[data-theme="dark"] {
 
 body[data-theme="atmosphere"] {
   --background: #FFF;
+}
+
+body {
+  background: var(--background);
+  color: var(--primary-text-color);
 }

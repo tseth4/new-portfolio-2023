@@ -19,7 +19,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body data-theme="dark" style={bodyStyle}>{children}</body>
+      <body data-theme="dark" 
+      // style={bodyStyle}
+      >{children}</body>
     </html>
   );
 }
