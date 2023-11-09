@@ -17,21 +17,28 @@
   font-size: 13px;
 }
 
+
+
 body[data-theme="light"] {
   --background: #FFF;
   --primary-text-color: black;
-  --nav-secondary-text--color: #DEDEDE;
+  --nav-secondary-text-color: #DEDEDE;
   --nav-primary-text-color: black;
 }
 
 body[data-theme="dark"] {
   --background: #151515;
   --primary-text-color: #FFF;
-  --nav-secondary-text--color: #212121;
+  --nav-secondary-text-color: #212121;
   --nav-primary-text-color: #FFF;
 
 }
 
 body[data-theme="atmosphere"] {
   --background: #FFF;
+}
+
+body {
+  background: var(--background);
+  color: var(--primary-text-color);
 }
