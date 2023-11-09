@@ -2,6 +2,7 @@
 import "./AboutStyles.scss";
 import Image from "next/image";
 import AboutData from "@/data/about-data.json";
+import SocialIcons from "./SocialIcons";
 export default function About() {
   return (
     <div className="about">
@@ -20,13 +21,7 @@ export default function About() {
         <div className="about__social-links">
           {AboutData.about.social_data.map((item, index) => (
             <div key={index}>
-              <Image
-                width={item.size.width}
-                height={item.size.height}
-                className={item.class}
-                src={item.src}
-                alt={item.alt}
-              />
+              <SocialIcons color="var(--primary-text-color)" name={item.name}/>
             </div>
           ))}
         </div>

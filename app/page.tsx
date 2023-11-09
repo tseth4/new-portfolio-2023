@@ -54,7 +54,6 @@ export default function Home() {
   //   // setObserverOptions({ ...observerOptions, root: navRef.current });
   // }, [navRef.current]);
 
-
   useEffect(() => {
     setLocalRefs({
       splashRef,
@@ -65,55 +64,40 @@ export default function Home() {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline;
-
+    let refsArr = Object.values(localRefs);
     const ctx = gsap.context(() => {
-      tl({
-        scrollTrigger: {
-          trigger: postsRef.current,
+      refsArr.forEach((section, index) => {
+        ScrollTrigger.create({
+          trigger: section.current,
           start: "top center",
-          end: "+=5",
-          scrub: true,
-        },
-      })
-        .to(".nav-side__rectangle-shape[data-title='posts']", {
-          className:
-            "nav-side__rectangle-shape nav-side__rectangle-shape--selected",
-        }, 0)
-        .to(".nav-side__item[data-title='posts']", {
-          className: "nav-side__item nav-side__item--selected",
-        }, 0);
-      tl({
-        scrollTrigger: {
-          trigger: splashRef.current,
-          start: "top center",
-          scrub: true,
-        },
-      })
-        .to(".nav-side__rectangle-shape[data-title='splash']", {
-          className:
-            "nav-side__rectangle-shape nav-side__rectangle-shape--selected",
-        }, 0)
-        .to(".nav-side__item[data-title='splash']", {
-          className: "nav-side__item nav-side__item--selected",
-        }, 0);
-      tl({
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          start: "top center",
-          scrub: true,
-        },
-      })
-        .to(".nav-side__rectangle-shape[data-title='about']", {
-          className:
-            "nav-side__rectangle-shape nav-side__rectangle-shape--selected",
-        }, 0)
-        .to(".nav-side__item[data-title='about']", {
-          className: "nav-side__item nav-side__item--selected",
-        }, 0);
+          onToggle: (self) => {
+            gsap.to(
+              `.nav-side__rectangle-shape[data-title=${section.current?.dataset.ref}]`,
+              {
+                duration: 0.2,
+                backgroundColor: self.isActive
+                  ? "var(--nav-primary-text-color)"
+                  : "var(--nav-secondary-text-color)",
+                boxShadow: self.isActive
+                  ? " 0px 0px 1rem var(--nav-primary-text-color)"
+                  : "",
+              }
+            );
+            gsap.to(
+              `.nav-side__item[data-title=${section.current?.dataset.ref}]`,
+              {
+                duration: 0.2,
+                color: self.isActive
+                  ? "var(--nav-primary-text-color)"
+                  : "var(--nav-secondary-text-color)", // if active then white or else black
+              }
+            );
+          },
+        });
+      });
     }, homeRef);
     return () => ctx.revert();
-  }, []);
+  }, [localRefs]);
 
   const handleNavigation = (title: string) => {
     console.log("title: ", title);
