@@ -34,7 +34,7 @@
       flex-direction: column;
       // gap: 0.5rem;
       height: var(--top-nav-height);
-      color: var(--nav-secondary-text--color);
+      color: var(--nav-secondary-text-color);
 
       &--selected {
         color: var(--nav-primary-text--color);
@@ -66,7 +66,7 @@
         width: 0.25rem;
         height: 10rem;
         // background-color: var(--nav-primary-text-color);
-        background-color: var(--nav-secondary-text--color);
+        background-color: var(--nav-secondary-text-color);
         margin: 20px;
         // box-shadow: 0px 0px 1rem var(--nav-primary-text-color);
 
@@ -83,10 +83,10 @@
 
         }
 
-        &--selected {
-          background-color: var(--nav-primary-text-color);
-          box-shadow: 0px 0px 1rem var(--nav-primary-text-color);
-        }
+        // &--selected {
+        //   background-color: var(--nav-primary-text-color);
+        //   box-shadow: 0px 0px 1rem var(--nav-primary-text-color);
+        // }
       }
     }
   }

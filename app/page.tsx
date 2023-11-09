@@ -43,7 +43,7 @@ export default function Home() {
   //   // root: navRef?.current,
   // });
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  // const observerRef = useRef<IntersectionObserver | null>(null);
 
   const postsRef = useRef<null | HTMLDivElement>(null);
   const aboutRef = useRef<null | HTMLDivElement>(null);
@@ -69,7 +69,7 @@ export default function Home() {
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,
-          start: "top center",
+          start: "top 1px",
           onToggle: (self) => {
             gsap.to(
               `.nav-side__rectangle-shape[data-title=${section.current?.dataset.ref}]`,
