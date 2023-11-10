@@ -1,4 +1,3 @@
-// import React from "react";
 import PostsData from "@/data/posts.json";
 import Link from "next/link";
 
@@ -6,9 +5,12 @@ import "./PostsStyles.scss";
 
 interface PostProps {
   posts: "all" | number;
+  pathname?: string;
 }
 
-export default function Posts({ posts }: PostProps) {
+export default function Posts({ posts, pathname }: PostProps) {
+  console.log("postsy pathname: ", pathname);
+
   let posts_length: number = posts === "all" ? PostsData.posts.length : posts;
   return (
     <div className="posts">
@@ -25,9 +27,13 @@ export default function Posts({ posts }: PostProps) {
           </div>
         </div>
       ))}
-      <div className="posts__all">
-        <Link href="/posts/all">ALL POSTS</Link>
-      </div>
+      {pathname != "/posts/all" ? (
+        <div className="posts__all">
+          <Link href="/posts/all">ALL POSTS</Link>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }

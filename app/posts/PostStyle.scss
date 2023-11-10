@@ -6,6 +6,10 @@ $item_padding: 1rem 0;
   justify-content: center;
   padding-top: 11.2rem;
 
+  &__container {
+    width: 48rem;
+  }
+
   &__header {
     border-bottom: $divider;
     border-top: $divider;
