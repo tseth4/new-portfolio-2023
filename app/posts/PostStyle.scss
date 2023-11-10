@@ -1,0 +1,35 @@
+$divider: 3px solid white;
+$item_padding: 1rem 0;
+
+.post {
+  display: flex;
+  justify-content: center;
+  padding-top: 11.2rem;
+
+  &__header {
+    border-bottom: $divider;
+    border-top: $divider;
+
+    h1 {
+      padding: $item_padding;
+      font-size: 5rem;
+    }
+
+    &-info {
+      border-top: $divider;
+      display: flex;
+      gap: 2.2rem;
+      padding: $item_padding;
+    }
+  }
+
+  &__content {
+    padding: $item_padding;
+  }
+
+  &__divider {
+    width: 100%;
+    border: 1px solid white;
+  }
+
+}

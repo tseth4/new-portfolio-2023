@@ -4,7 +4,7 @@ import Posts from "@/components/Posts/Posts";
 export default function page() {
   return (
     <div className="posts-all">
-      <div className="posts-all__title"> Posts</div>
+      <div className="posts-all__title">POSTS</div>
       <Posts posts="all" />
     </div>
   );

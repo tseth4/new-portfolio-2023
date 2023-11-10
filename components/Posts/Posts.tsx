@@ -25,6 +25,9 @@ export default function Posts({ posts }: PostProps) {
           </div>
         </div>
       ))}
+      <div className="posts__all">
+        <Link href="/posts/all">ALL POSTS</Link>
+      </div>
     </div>
   );
 }
