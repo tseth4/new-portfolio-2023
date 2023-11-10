@@ -20,39 +20,15 @@ export interface OberserverTypes {
   [key: string]: RefObject<HTMLElement>;
 }
 
-// export interface OnScreenTypes {
-//   refs: OberserverTypes;
-//   root: RefObject<HTMLElement>;
-// }
-
-// interface ObserverOptionTypes {
-//   threshold?: string | number | number[];
-//   root?: HTMLElement | null;
-// }
-
 export default function Home() {
-  // const tl = useRef(timeline);
-
   const navRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
 
   const [localRefs, setLocalRefs] = useState<OberserverTypes>({});
-  // const [isOnScreen, setIsOnScreen] = useState("");
-  // Do I need to use useState
-  // const [observerOptions, setObserverOptions] = useState<ObserverOptionTypes>({
-  //   threshold: [1],
-  //   // root: navRef?.current,
-  // });
-
-  // const observerRef = useRef<IntersectionObserver | null>(null);
 
   const postsRef = useRef<null | HTMLDivElement>(null);
   const aboutRef = useRef<null | HTMLDivElement>(null);
   const splashRef = useRef<null | HTMLDivElement>(null);
   const homeRef = useRef<null | HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   // setObserverOptions({ ...observerOptions, root: navRef.current });
-  // }, [navRef.current]);
 
   useEffect(() => {
     setLocalRefs({

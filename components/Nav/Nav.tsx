@@ -18,15 +18,16 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
   const { handleNavigation } = props;
   // const pathname = usePathname();
   const [activeTheme, setActiveTheme] = useState("dark");
-  const [selectedItem, setSelectedItem] = useState("home");
+  // const [selectedItem, setSelectedItem] = useState("home");
 
   // console.log("pathname: ", pathname);
-  useLayoutEffect(() => {
-    let myTheme = localStorage.getItem("myTheme");
-    if (myTheme) {
-      setActiveTheme(myTheme);
-    }
-  }, []);
+  // useLayoutEffect(() => {
+  //   // let myTheme = localStorage.getItem("myTheme");
+  //   let myTheme = localStorage.getItem("myTheme");
+  //   if (myTheme) {
+  //     setActiveTheme(myTheme);
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (activeTheme) document.body.dataset.theme = activeTheme;

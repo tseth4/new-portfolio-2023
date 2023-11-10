@@ -15,7 +15,7 @@ export default function Posts({ posts }: PostProps) {
       {PostsData.posts.slice(0, posts_length).map((post, index) => (
         <div className="posts__card" key={index}>
           <div className="posts__card-title">{post.title}</div>
-          <div className="posts__card-content">{post.content}</div>
+          <div className="posts__card-content">{post.preview_content}</div>
           <div className="posts__card-date-container">
             <div className="posts__card-date">{post.date}</div>
             <span>•</span>
