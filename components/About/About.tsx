@@ -3,6 +3,7 @@ import "./AboutStyles.scss";
 import Image from "next/image";
 import AboutData from "@/data/about-data.json";
 import SocialIcons from "./SocialIcons";
+import Link from "next/link";
 export default function About() {
   return (
     <div className="about">
@@ -17,11 +18,17 @@ export default function About() {
       </div>
       <div className="about__info">
         <h1>{AboutData.about.h1}</h1>
-        <p>{AboutData.about.paragraph}</p>
+        <div dangerouslySetInnerHTML={{ __html: AboutData.about.paragraph }}/>
+        {/* <p>{AboutData.about.paragraph}</p> */}
         <div className="about__social-links">
           {AboutData.about.social_data.map((item, index) => (
             <div key={index}>
-              <SocialIcons color="var(--primary-text-color)" name={item.name}/>
+              <Link href={item.href}>
+                <SocialIcons
+                  color="var(--primary-text-color)"
+                  name={item.name}
+                />
+              </Link>
             </div>
           ))}
         </div>

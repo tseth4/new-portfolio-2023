@@ -1,3 +1,5 @@
+@import '@/lib/breakpoints';
+
 .nav {
   &-side {
     position: fixed;
@@ -17,7 +19,7 @@
 
 
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint-tablet) {
       flex-direction: column;
       bottom: 0;
       width: var(--side-nav-width);
@@ -40,7 +42,7 @@
       //   color: var(--nav-primary-text--color);
       // }
 
-      @media (min-width: 768px) {
+      @media (min-width: $breakpoint-tablet) {
         gap: 1.5rem;
         flex-direction: row;
         height: fit-content;
@@ -56,7 +58,7 @@
         font-weight: 500;
         cursor: pointer;
 
-        @media (min-width: 768px) {
+        @media (min-width: $breakpoint-tablet) {
           order: unset;
 
         }
@@ -77,7 +79,7 @@
         width: 100%;
         margin: 0;
 
-        @media (min-width: 768px) {
+        @media (min-width: $breakpoint-tablet) {
           height: 10rem;
           width: 0.25rem;
 
