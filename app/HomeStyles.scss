@@ -11,15 +11,8 @@
   &__splash,
   &__posts,
   &__about {
-    padding-left: var(--side-nav-width);
     height: calc(100vh);
     width: 100%;
-    padding-left: 0;
-
-    // scroll-margin: 5rem 0 0 0;
-    @media (min-width: $breakpoint-tablet) {
-      padding-left: 0;
-    }
   }
 
   &__posts {

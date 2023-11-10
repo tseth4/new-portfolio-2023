@@ -14,7 +14,7 @@
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-desktop) {
       width: 638px;
       height: 638px;
     }
