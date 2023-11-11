@@ -76,7 +76,7 @@ export default function Home() {
   }, [localRefs]);
 
   const handleNavigation = (title: string) => {
-    console.log("title: ", title);
+    // console.log("title: ", title);
     let selectedElement = localRefs[`${title}Ref`]?.current;
     if (selectedElement) {
       selectedElement.scrollIntoView({

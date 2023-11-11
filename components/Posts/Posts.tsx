@@ -9,7 +9,7 @@ interface PostProps {
 }
 
 export default function Posts({ posts, pathname }: PostProps) {
-  console.log("postsy pathname: ", pathname);
+  // console.log("postsy pathname: ", pathname);
 
   let posts_length: number = posts === "all" ? PostsData.posts.length : posts;
   return (

@@ -1,4 +1,5 @@
 $page_padding: 0 2.5rem;
+$item_padding: 1rem 0;
 
 .posts {
   height: 100%;
@@ -9,17 +10,23 @@ $page_padding: 0 2.5rem;
   gap: 3rem;
   padding: $page_padding;
   width: fit-content;
+  padding: $item_padding;
 
   &-all {
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
+    padding-top: 11.2rem;
 
     &__title {
       font-size: 2.75rem;
       font-weight: 700;
-      padding: $page_padding;
+      // padding: $page_padding;
+      // @media (min-width: ){
+
+      // }
     }
   }
 
@@ -53,6 +60,7 @@ $page_padding: 0 2.5rem;
     display: flex;
     justify-content: flex-end;
     width: 100%;
+
     a {
       // cursor: pointer;
       text-decoration: none;
