@@ -17,6 +17,7 @@ $item_padding: 1rem 0;
     h1 {
       padding: $item_padding;
       font-size: 5rem;
+      font-family: var(--header-font);
     }
 
     &-info {

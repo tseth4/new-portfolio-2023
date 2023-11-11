@@ -1,15 +1,15 @@
 "use client";
 import Posts from "@/components/Posts/Posts";
 import { usePathname } from "next/navigation";
+import "./PostsAllStyles.scss";
 
 export default function page() {
   const pathname = usePathname();
-  // console.log("posts all pathname: ", pathname);
 
   return (
     <div className="posts-all">
       <div className="posts-all__container">
-        <div className="posts-all__title">POSTS</div>
+        <div className="posts-all__title">Posts</div>
         <Posts posts="all" pathname={pathname} />
       </div>
     </div>

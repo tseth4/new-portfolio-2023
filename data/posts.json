@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "title": "My First Post",
+      "title": "AWS Reinvent",
       "author": "Tristan Setha",
       "date": "2023-10-23",
       "preview_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
@@ -9,7 +9,7 @@
       "tags": "project"
     },
     {
-      "title": "My Second Post",
+      "title": "TDECU Map Locator",
       "author": "Tristan Setha",
       "date": "2023-10-23",
       "preview_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
@@ -17,7 +17,7 @@
       "tags": "project"
     },
     {
-      "title": "My Third Post",
+      "title": "Portfolio",
       "author": "Tristan Setha",
       "date": "2023-10-23",
       "preview_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
@@ -25,7 +25,7 @@
       "tags": "project"
     },
     {
-      "title": "My Fourth Post",
+      "title": "GoDaddy Ads",
       "author": "Tristan Setha",
       "date": "2023-10-23",
       "preview_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
@@ -34,14 +34,6 @@
     },
     {
       "title": "My Fifth Post",
-      "author": "Tristan Setha",
-      "date": "2023-10-23",
-      "preview_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-      "tags": "project"
-    },
-    {
-      "title": "My Sixth Post",
       "author": "Tristan Setha",
       "date": "2023-10-23",
       "preview_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
