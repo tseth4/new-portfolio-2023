@@ -12,7 +12,7 @@ export default function About() {
           width={200}
           height={200}
           className="about__profile-picture-img"
-          src="/pp_v6.jpg"
+          src="/pp_temp.png"
           alt="ppv5"
         />
       </div>
