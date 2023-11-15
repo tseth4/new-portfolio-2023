@@ -1,6 +1,7 @@
 "use client";
 import { usePathname, useSearchParams } from "next/navigation";
 import PostsData from "@/data/posts.json";
+import Image from "next/image";
 import "./PostStyle.scss";
 
 export default function page() {
@@ -19,15 +20,36 @@ export default function page() {
             <div>
               {index ? PostsData.posts[parseInt(index)].date : "Loading..."}
             </div>
+            <span>•</span>
             <div>
               {index ? PostsData.posts[parseInt(index)].author : "Loading..."}
             </div>
           </div>
         </div>
+        {index && PostsData.posts[parseInt(index)].header_image ? (
+          <div className="post__header-image">
+            <Image
+              fill={true}
+              src={PostsData.posts[parseInt(index)]?.header_image}
+              alt="Header image"
+            />
+          </div>
+        ) : (
+          ""
+        )}
 
-        <div className="post__content">
-          {index ? PostsData.posts[parseInt(index)].content : "Loading..."}
-        </div>
+        {/* <div className="post__content"> */}
+        <div
+          className="post__content"
+          dangerouslySetInnerHTML={{
+            __html: index
+              ? PostsData.posts[parseInt(index)].content
+              : "Loading...",
+          }}
+        />
+
+        {/* {index ? PostsData.posts[parseInt(index)].content : "Loading..."} */}
+        {/* </div> */}
       </div>
     </div>
   );
