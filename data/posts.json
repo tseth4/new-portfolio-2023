@@ -27,6 +27,27 @@
           "element_content": "Develop a new website and an experience for the AWS re:Invent Superhero Personality Test — a seven-question interactive quiz designed to determine which superhero a user aligns with the most. The project will be showcased at the re:Invent 2023 event in collaboration with AWS Analytics."
         },
         {
+          "type": "img",
+          "image_container": true,
+          "image_container_class": "post__content-start-page-container",
+          "image_src": [
+            "/startpage_desktop.png",
+            "/startpage_mobile.png"
+          ],
+          "image_caption": [
+            "Start page | Desktop",
+            "Start page | mobile"
+          ],
+          "image_alt": [
+            "Start page Desktop",
+            "Start page mobile"
+          ],
+          "image_class": [
+            "post__content-start-page-desktop",
+            "post__content-start-page-mobile"
+          ]
+        },
+        {
           "type": "p",
           "element_content": "The quiz will determine which Hero (Cloud Sight, Wire Weaver, Data Lynx) the user most identifies with based on 7 questions. Each question assigns points to one or more hero alignments. At the end, the user gets matched with the hero with the highest score."
         },

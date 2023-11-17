@@ -20,9 +20,12 @@ export interface ContentItemType {
   class?: string;
   header?: string;
   header_type?: string;
-  image_src?: string;
-  image_alt?: string;
-  image_class?: string;
+  image_src?: string | string[];
+  image_caption?: string | string[];
+  image_alt?: string | string[];
+  image_class?: string | string[];
+  image_container_class?: string;
+  image_container?: boolean;
   table_header?: string[];
   table_rows?: string[][];
   element_content?: string;
@@ -66,17 +69,20 @@ export default function page() {
         <${item.type}>
           <thead>
             <tr>
-              ${item.table_header.map(
-                (item, index) => `<th key=${index}>${item}</th>`
-              ).join('')}
+              ${item.table_header
+                .map((item, index) => `<th key=${index}>${item}</th>`)
+                .join("")}
             </tr>
           </thead>
           <tbody>
-              ${item.table_rows.map((item, index) => (
-                `<tr key=${index}>
-                  ${item.map((str, i) => `<td key=${i}>${str}</td>`).join('')}
+              ${item.table_rows
+                .map(
+                  (item, index) =>
+                    `<tr key=${index}>
+                  ${item.map((str, i) => `<td key=${i}>${str}</td>`).join("")}
                 </tr>`
-              )).join('')}
+                )
+                .join("")}
           </tbody>
         </${item.type}>  
       `;
@@ -84,11 +90,46 @@ export default function page() {
     }
 
     if (item.type === "img") {
-      tempString += `<img 
-        class=${item.image_class}
+      if (
+        item.image_container &&
+        // item.image_src &&
+        // item.image_caption &&
+        // item.image_alt &&
+        Array.isArray(item.image_src) &&
+        Array.isArray(item.image_caption) &&
+        Array.isArray(item.image_alt)
+      ) {
+        tempString += `
+        <div class="${`post__content-img-container ${item.image_container_class}`}">
+          ${item.image_src.map(
+            (src, index) =>
+              `<div class="${
+                item.image_class
+                  ? `post__content-img ` + item.image_class[index]
+                  : "post__content-img"
+              }"><image key=${index} src=${src} alt=${
+                item.image_alt ? item.image_alt[index] : "undefined"
+              }/></div>
+            ${
+              item.image_caption
+                ? `<div class=${item.image_class ? item.image_class[index] + "-caption" : ""}>${
+                    item.image_caption[index]
+                  }</div>
+            `
+                : ""
+            }`
+          ).join("")}
+        </div>
+`;
+      } else {
+        tempString += `
+        <img 
         src=${item.image_src}
         alt=${item.image_alt}
-      />`;
+        class=${item.image_class}
+        />
+        `;
+      }
     }
     if (item.element_content && item.type !== "table") {
       tempString += `<${item.type}${item.class ? ` class=${item.class}` : ""}>${

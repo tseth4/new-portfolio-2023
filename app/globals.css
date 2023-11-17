@@ -27,13 +27,16 @@ html {
 body[data-theme="light"] {
   --background: #FFF;
   --primary-text-color: #000026FF;
+  --primary-header-text-color: #000000;
   --nav-secondary-text-color: #DEDEDE;
   --nav-primary-text-color: black;
 }
 
 body[data-theme="dark"] {
   --background: #151515;
-  --primary-text-color: #F2F2F2;
+  /* --primary-text-color: #F2F2F2; */
+  --primary-text-color: #c2c2c2;
+  --primary-header-text-color: #F2F2F2;
   --nav-secondary-text-color: #212121;
   --nav-primary-text-color: #F2F2F2;
 
