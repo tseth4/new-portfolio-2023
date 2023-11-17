@@ -3,6 +3,7 @@
 html {
   font-size: 16px;
 }
+
 :root {
   --breakpoint-tablet: 768px;
   --breakpoint-mobile: 394px;
@@ -13,6 +14,7 @@ html {
   --header-font: 'Archivo', sans-serif;
   /* --post-paragraph-font-size: 0.9375rem; */
   --post-paragraph-font-size: 1.2rem;
+  --post-caption-font-size: 0.75rem;
 }
 
 * {
@@ -30,6 +32,7 @@ body[data-theme="light"] {
   --primary-header-text-color: #000000;
   --nav-secondary-text-color: #DEDEDE;
   --nav-primary-text-color: black;
+  --post-caption-color: #7c7c7c;
 }
 
 body[data-theme="dark"] {
@@ -39,6 +42,7 @@ body[data-theme="dark"] {
   --primary-header-text-color: #F2F2F2;
   --nav-secondary-text-color: #212121;
   --nav-primary-text-color: #F2F2F2;
+  --post-caption-color: #7c7c7c;
 
 }
 

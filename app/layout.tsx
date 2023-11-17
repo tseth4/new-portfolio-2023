@@ -3,8 +3,8 @@ import "./globals.css";
 // import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "Tristan's homebase",
-  description: "Tristan's homebase",
+  title: "Tristan Setha's homebase",
+  description: "Tristan Setha's homebase",
 };
 
 export default function RootLayout({

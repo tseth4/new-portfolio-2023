@@ -28,6 +28,7 @@ export interface ContentItemType {
   image_container?: boolean;
   table_header?: string[];
   table_rows?: string[][];
+  table_class?: string;
   element_content?: string;
 }
 
@@ -66,7 +67,7 @@ export default function page() {
     if (item.type === "table") {
       if (item.table_header && item.table_rows) {
         tempString += `
-        <${item.type}>
+        <${item.type} class=${item.class}>
           <thead>
             <tr>
               ${item.table_header
@@ -92,9 +93,6 @@ export default function page() {
     if (item.type === "img") {
       if (
         item.image_container &&
-        // item.image_src &&
-        // item.image_caption &&
-        // item.image_alt &&
         Array.isArray(item.image_src) &&
         Array.isArray(item.image_caption) &&
         Array.isArray(item.image_alt)
@@ -107,12 +105,12 @@ export default function page() {
                 item.image_class
                   ? `post__content-img ` + item.image_class[index]
                   : "post__content-img"
-              }"><image key=${index} src=${src} alt=${
+              }"><image key=${index} src=${src} alt="${
                 item.image_alt ? item.image_alt[index] : "undefined"
-              }/></div>
+              }"/></div>
             ${
               item.image_caption
-                ? `<div class=${item.image_class ? item.image_class[index] + "-caption" : ""}>${
+                ? `<div class="${item.image_class ? item.image_class[index] + "-caption post__content-caption" : ""}">${
                     item.image_caption[index]
                   }</div>
             `
@@ -161,28 +159,12 @@ export default function page() {
           ) : (
             ""
           )}
-          {/* {currentPost.content.map((item, index) => (
-            <></>
-          ))} */}
-
-          {/* <div className="post__content"> */}
-          {/* <div
-            className="post__content"
-            dangerouslySetInnerHTML={{
-              __html: index
-                ? currentPost.content
-                : "Loading...",
-            }}
-          /> */}
           <div
             className="post__content"
             dangerouslySetInnerHTML={{
               __html: postContent.length > 0 ? postContent : "Loading...",
             }}
           />
-
-          {/* {index ? currentPost.content : "Loading..."} */}
-          {/* </div> */}
         </div>
       </div>
     );

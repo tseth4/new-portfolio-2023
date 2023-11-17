@@ -49,10 +49,61 @@
         },
         {
           "type": "p",
-          "element_content": "The quiz will determine which Hero (Cloud Sight, Wire Weaver, Data Lynx) the user most identifies with based on 7 questions. Each question assigns points to one or more hero alignments. At the end, the user gets matched with the hero with the highest score."
+          "element_content": "The quiz will determine which Hero (Cloud Sight, Wire Weaver, Data Lynx) the user most identifies with based on 7 questions. Each question assigns points to one or more hero alignments."
+        },
+        {
+          "type": "img",
+          "image_container": true,
+          "image_container_class": "post__content-question-page-container",
+          "image_src": [
+            "/questionpage_desktop.png",
+            "/questionpage_mobile.png"
+          ],
+          "image_caption": [
+            "Question page | Desktop",
+            "Question page | mobile"
+          ],
+          "image_alt": [
+            "Question page Desktop",
+            "Question page mobile"
+          ],
+          "image_class": [
+            "post__content-question-page-desktop",
+            "post__content-question-page-mobile"
+          ]
+        },
+        {
+          "type": "p",
+          "element_content": "At the end, the user gets matched with the hero with the highest score."
+        },
+        {
+          "type": "img",
+          "image_container": true,
+          "image_container_class": "post__content-results-page-container",
+          "image_src": [
+            "/resultspage_desktop.png",
+            "/resultspage_mobile.png"
+          ],
+          "image_caption": [
+            "Results page | Desktop",
+            "Results page | mobile"
+          ],
+          "image_alt": [
+            "Results page Desktop",
+            "Results page mobile"
+          ],
+          "image_class": [
+            "post__content-results-page-desktop",
+            "post__content-results-page-mobile"
+          ]
+        },
+        {
+          "type": "p",
+          "element_content": "Each hero is associated with one or more themes, providing users with recommended sessions to attend during the event."
         },
         {
           "type": "table",
+          "class": "post__content-theme-table",
           "table_header": [
             "Theme(s)",
             "Hero"
@@ -73,8 +124,25 @@
           ]
         },
         {
-          "type": "p",
-          "element_content": "Each hero is associated with one or more themes, providing users with recommended sessions to attend during the event."
+          "type": "img",
+          "image_container": true,
+          "image_container_class": "post__content-schedule-page-container",
+          "image_src": [
+            "/schedulepage_desktop.png",
+            "/schedulepage_mobile.png"
+          ],
+          "image_caption": [
+            "Schedule page | Desktop",
+            "Schedule page | mobile"
+          ],
+          "image_alt": [
+            "Schedule page Desktop",
+            "Schedule page mobile"
+          ],
+          "image_class": [
+            "post__content-schedule-page-desktop",
+            "post__content-schedule-page-mobile"
+          ]
         },
         {
           "type": "p",
@@ -84,7 +152,7 @@
         },
         {
           "type": "p",
-          "element_content": "We approached the development process from a data-driven approach to facilitate easy client updates. This involved decoupling data such as hero names, assets, questions, and points from code, which underwent frequent changes during the development process. To achieve this flexibility, we stored data using JSON and CSV files, converting the latter into JSON through scripts."
+          "element_content": "We approached the development process from a data-driven approach to facilitate easy client updates. This involved decoupling data such as hero names, assets, questions, and points from code, which underwent frequent changes during the development process. To achieve this flexibility, we stored data in CSV files and parsed into JSON format."
         }
       ]
     }

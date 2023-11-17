@@ -85,7 +85,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
             className="nav-top__icon-container"
           >
             <Image
-              // priority
+              priority
               width={20}
               height={20}
               src={moon_icon}
