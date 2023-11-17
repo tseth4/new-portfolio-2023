@@ -14,6 +14,10 @@
           "type": "p",
           "header": "Introduction",
           "header_type": "h2",
+          "element_content": "AWS re:Invent is a learning conference hosted by Amazon Web Services (AWS) for the global cloud computing community. It's AWS's biggest cloud event of the year."
+        },
+        {
+          "type": "p",
           "element_content": "At EAS I had the opportunity to work alongside a team of designers, project managers, and other engineers to develop an online personality test platform for the AWS Reinvent event."
         },
         {
@@ -45,8 +49,10 @@
               "Analytics and AI",
               "Cloud Sight"
             ]
-          ],
-          "image": "",
+          ]
+        },
+        {
+          "type": "p",
           "element_content": "Each hero is associated with one or more themes, providing users with recommended sessions to attend during the event."
         },
         {

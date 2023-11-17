@@ -11,7 +11,8 @@ html {
   --side-nav-margin-left: 5rem;
   --top-nav-height: 5rem;
   --header-font: 'Archivo', sans-serif;
-  --post-paragraph-font-size: 0.9375rem;
+  /* --post-paragraph-font-size: 0.9375rem; */
+  --post-paragraph-font-size: 1.2rem;
 }
 
 * {

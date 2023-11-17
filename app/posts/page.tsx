@@ -54,11 +54,33 @@ export default function page() {
     }
   }, [currentPost]);
 
-  function handleItemHtml(item: ContentItemType) {
-    console.log("item: ", item);
+  function handleItemHtml(item: ContentItemType): string {
     let tempString = "";
     if (item.header && item.header_type) {
       tempString += `<${item.header_type}>${item.header}</${item.header_type}>`;
+    }
+
+    if (item.type === "table") {
+      if (item.table_header && item.table_rows) {
+        tempString += `
+        <${item.type}>
+          <thead>
+            <tr>
+              ${item.table_header.map(
+                (item, index) => `<th key=${index}>${item}</th>`
+              ).join('')}
+            </tr>
+          </thead>
+          <tbody>
+              ${item.table_rows.map((item, index) => (
+                `<tr key=${index}>
+                  ${item.map((str, i) => `<td key=${i}>${str}</td>`).join('')}
+                </tr>`
+              )).join('')}
+          </tbody>
+        </${item.type}>  
+      `;
+      }
     }
 
     if (item.type === "img") {
@@ -68,12 +90,11 @@ export default function page() {
         alt=${item.image_alt}
       />`;
     }
-    if (item.element_content) {
+    if (item.element_content && item.type !== "table") {
       tempString += `<${item.type}${item.class ? ` class=${item.class}` : ""}>${
         item.element_content
       }</${item.type}>`;
     }
-    console.log("tempString2: ", tempString)
     return tempString;
   }
   if (currentPost) {

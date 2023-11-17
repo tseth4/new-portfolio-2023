@@ -55,7 +55,16 @@ $item_padding: 1rem 0;
     p {
       font-size: var(--post-paragraph-font-size);
       line-height: 1.58rem;
+      margin-bottom: 1.5rem;
     }
+    h2 {
+      margin-top: 2rem;
+    }
+
+    // >::after {
+    //   content: " ";
+    //   display: block;
+    // }
 
     // }
   }
