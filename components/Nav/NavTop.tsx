@@ -3,24 +3,17 @@ import "./NavStyles.scss";
 import Image from "next/image";
 import sun_icon from "@/public/sun.svg";
 import moon_icon from "@/public/moon.svg";
-import { useEffect, useState, forwardRef, useLayoutEffect } from "react";
-import NavData from "@/data/nav-data.json";
-// import { useRouter, usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
+// import Link from "next/link";
 
-interface NavProps {
-  handleNavigation: (title: string) => void;
-  // isOnScreen: string;
-}
-
-export type Ref = HTMLDivElement;
-
-const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
-  const { handleNavigation } = props;
-  // const pathname = usePathname();
+export default function NavTop() {
+  const router = useRouter();
+  const pathname = usePathname();
   const [activeTheme, setActiveTheme] = useState("dark");
   // const [selectedItem, setSelectedItem] = useState("home");
 
-  // console.log("pathname: ", pathname);
+  console.log("pathname: ", pathname);
   // useLayoutEffect(() => {
   //   // let myTheme = localStorage.getItem("myTheme");
   //   let myTheme = localStorage.getItem("myTheme");
@@ -38,34 +31,15 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
     setActiveTheme(theme);
   };
 
-  const handleNavClick = (title: string) => {
-    handleNavigation(title);
-    // router.push(`/#${title}`);
-  };
-
   // useEffect(() => {
   //   setSelectedItem(isOnScreen);
   // }, [isOnScreen]);
 
   return (
     <>
-      <div className="nav-side">
-        {NavData.nav.map((item, id) => (
-          <div data-title={item.title} key={id} className={"nav-side__item"}>
-            <div
-              data-title={item.title}
-              className={"nav-side__rectangle-shape"}
-            ></div>
-            <div
-              className="nav-side__rectangle-title"
-              onClick={() => handleNavClick(item.title)}
-            >
-              {item.title === "splash" ? "HOME" : item.title.toUpperCase()}
-            </div>
-          </div>
-        ))}
-      </div>
-      <div ref={ref} className="nav-top">
+      <div className={pathname != "/" ? "nav-top nav-top-back" : "nav-top"}>
+        <div onClick={() => router.back()} className={pathname != "/" ? "nav-top__back-arrow" : "nav-top__back-arrow--hide"}></div>
+        {/* <div className="nav-top__back-arrow"></div> */}
         {activeTheme === "light" ? (
           <div
             onClick={() => handleSetActiveTheme("dark")}
@@ -96,6 +70,4 @@ const Nav = forwardRef<HTMLDivElement, NavProps>((props, ref): JSX.Element => {
       </div>
     </>
   );
-});
-
-export default Nav;
+}

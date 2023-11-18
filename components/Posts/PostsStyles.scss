@@ -1,5 +1,6 @@
-$page_padding: 0 2.5rem;
-$item_padding: 5rem 0;
+@import '@/lib/breakpoints';
+// $page_padding: 0 2.5rem;
+$item_padding: 0 10%;
 
 .posts {
   height: 100%;
@@ -8,23 +9,31 @@ $item_padding: 5rem 0;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  padding: $page_padding;
+  // padding: $page_padding;
   width: fit-content;
+  // padding: $item_padding;
   padding: $item_padding;
 
   &__card {
     // border: 2px solid red;
-    width: 100%;
-    width: 47rem;
+    // width: 47rem;
     display: flex;
     flex-direction: column;
     gap: 0.55rem;
+
+    width: 100%;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 50%;
+
+    }
 
     &-title {
       font-weight: 700;
       font-size: 2rem;
       font-family: var(--header-font);
-      color: var(--primary-header-text-color)
+      color: var(--primary-header-text-color);
+      // padding: $item_padding;
     }
 
     &-content {
@@ -52,6 +61,12 @@ $item_padding: 5rem 0;
     display: flex;
     justify-content: flex-end;
     width: 100%;
+
+
+
+    // &__title {
+    //   padding: $item_padding;
+    // }
 
     a {
       // cursor: pointer;

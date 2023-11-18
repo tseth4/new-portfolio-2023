@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-// import Nav from "@/components/Nav";
+import NavTop from "@/components/Nav/NavTop";
 
 export const metadata: Metadata = {
   title: "Tristan Setha's homebase",
@@ -16,8 +16,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         data-theme="dark"
-      // style={bodyStyle}
-      >{children}</body>
+        // style={bodyStyle}
+      >
+        <NavTop />
+        {children}
+      </body>
     </html>
   );
 }

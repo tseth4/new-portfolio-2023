@@ -38,7 +38,6 @@ export default function page() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  // const elementKeyMap = { paragraph: "<p></p>" };
   useEffect(() => {
     let index: string | null = searchParams.get("index");
 

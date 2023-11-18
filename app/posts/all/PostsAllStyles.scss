@@ -11,4 +11,9 @@
     font-size: 3.75rem;
     font-weight: 700;
   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
 }

@@ -1,6 +1,6 @@
 "use client";
 import "./HomeStyles.scss";
-import Nav from "@/components/Nav/Nav";
+import NavSide from "@/components/Nav/NavSide";
 import Splash from "@/components/Splash/Splash";
 import Posts from "@/components/Posts/Posts";
 import About from "@/components/About/About";
@@ -87,7 +87,7 @@ export default function Home() {
 
   return (
     <main ref={homeRef} className="home">
-      <Nav
+      <NavSide
         ref={navRef}
         // isOnScreen={isOnScreen}
         handleNavigation={handleNavigation}

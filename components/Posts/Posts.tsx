@@ -32,9 +32,7 @@ export default function Posts({ posts, pathname }: PostProps) {
           <Link href="/posts/all">all posts</Link>
         </div>
       ) : (
-        <div className="posts__all">
-          <Link href="/">{"<<"} HOME</Link>
-        </div>
+        ""
       )}
     </div>
   );
