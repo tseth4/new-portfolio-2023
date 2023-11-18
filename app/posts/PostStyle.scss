@@ -257,6 +257,10 @@ $item_padding: 1rem 0;
       font-size: var(--post-caption-font-size);
       color: var(--post-caption-color);
     }
+
+    &-tdecu-caption {
+      text-align: right;
+    }
   }
 
   &__divider {

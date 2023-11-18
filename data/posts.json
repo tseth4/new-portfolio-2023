@@ -170,11 +170,36 @@
           "type": "p",
           "header": "Introduction",
           "header_type": "h2",
-          "element_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore, ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore,ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+          "element_content": "At EAS, I had the opportunity to work on a dealership locator designed to help TDECU customers find dealerships associated with TDECU."
         },
         {
           "type": "p",
-          "element_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore, ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore,ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+          "header": "Project goal",
+          "header_type": "h2",
+          "element_content": "Develop a portable and reusable web application that leverages the Google Maps API to utilize the user's current location. This application will enable users to locate and sort through nearby dealerships based on their name and distance."
+        },
+        {
+          "type": "img",
+          "image_container": true,
+          "image_container_class": "post__content-tdecu-container",
+          "image_src": [
+            "/tdecu.png"
+          ],
+          "image_caption": [
+            "TDECU Locator"
+          ],
+          "image_alt": [
+            "TDECU Locator"
+          ],
+          "image_class": [
+            "post__content-tdecu"
+          ]
+        },
+        {
+          "type": "p",
+          "header": "Technologies",
+          "header_type": "h2",
+          "element_content": "The application was built using a stack that includes Google Maps API, Gulp.js, PHP, Node.js, Sass, and HTML5 Web Components."
         }
       ]
     }
