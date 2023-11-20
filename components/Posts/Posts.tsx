@@ -9,7 +9,6 @@ interface PostProps {
 }
 
 export default function Posts({ posts, pathname }: PostProps) {
-  // console.log("postsy pathname: ", pathname);
 
   let posts_length: number = posts === "all" ? PostsData.posts.length : posts;
   return (
@@ -29,7 +28,8 @@ export default function Posts({ posts, pathname }: PostProps) {
       ))}
       {pathname != "/posts/all" ? (
         <div className="posts__all">
-          <Link href="/posts/all">all posts</Link>
+          <Link href="/posts/all">POSTS</Link>
+          <div className="posts__all-arrow"></div>
         </div>
       ) : (
         ""

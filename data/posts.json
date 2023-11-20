@@ -164,13 +164,13 @@
       "tags": [
         "project"
       ],
-      "preview_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
+      "preview_content": "A web application designed to help TDECU members find dealerships associated with TDECU",
       "post_content": [
         {
           "type": "p",
           "header": "Introduction",
           "header_type": "h2",
-          "element_content": "At EAS, I had the opportunity to work on a dealership locator designed to help TDECU customers find dealerships associated with TDECU."
+          "element_content": "At EAS, I had the opportunity to work on a dealership locator designed to help TDECU members find dealerships associated with TDECU."
         },
         {
           "type": "p",

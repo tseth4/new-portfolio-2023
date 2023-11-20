@@ -61,6 +61,28 @@ $item_padding: 0 10%;
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    cursor: pointer;
+    gap: 0.3rem;
+    align-items: center;
+    font-size: 0.5rem;
+
+    &--hide {
+      display: none;
+    }
+
+    &-arrow {
+      padding: 0.17rem;
+      border: solid var(--primary-text-color);
+      border-width: 0 0.1rem 0.1rem 0;
+      display: inline-block;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      cursor: pointer;
+
+      &--hide {
+        display: none;
+      }
+    }
 
 
 

@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <div className="about">
-      <div className="about__profile-picture">
+      {/* <div className="about__profile-picture">
         <Image
           width={200}
           height={200}
@@ -15,7 +15,7 @@ export default function About() {
           src="/pp_temp.png"
           alt="ppv5"
         />
-      </div>
+      </div> */}
       <div className="about__info">
         <h1>{AboutData.about.h1}</h1>
         <div dangerouslySetInnerHTML={{ __html: AboutData.about.paragraph }}/>

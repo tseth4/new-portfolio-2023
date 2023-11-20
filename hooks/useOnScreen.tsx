@@ -17,7 +17,7 @@ export default function useOnScreen({ refs, root }: OnScreenTypes) {
     observerRef.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log(entry, " is intersecting")
+          // console.log(entry, " is intersecting")
           if (entry.target.getAttribute("data-ref")) {
             let dataRefStr = entry.target.getAttribute("data-ref");
             if (dataRefStr) {

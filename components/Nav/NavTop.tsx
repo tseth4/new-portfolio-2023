@@ -13,7 +13,6 @@ export default function NavTop() {
   const [activeTheme, setActiveTheme] = useState("dark");
   // const [selectedItem, setSelectedItem] = useState("home");
 
-  console.log("pathname: ", pathname);
   // useLayoutEffect(() => {
   //   // let myTheme = localStorage.getItem("myTheme");
   //   let myTheme = localStorage.getItem("myTheme");
@@ -38,7 +37,21 @@ export default function NavTop() {
   return (
     <>
       <div className={pathname != "/" ? "nav-top nav-top-back" : "nav-top"}>
-        <div onClick={() => router.back()} className={pathname != "/" ? "nav-top__back-arrow" : "nav-top__back-arrow--hide"}></div>
+        <div
+          onClick={() => router.back()}
+          className={
+            pathname != "/" ? "nav-top__back-btn" : "nav-top__back-btn--hide"
+          }
+        >
+          <div
+            className={
+              pathname != "/"
+                ? "nav-top__back-arrow"
+                : "nav-top__back-arrow--hide"
+            }
+          ></div>
+          <span>BACK</span>
+        </div>
         {/* <div className="nav-top__back-arrow"></div> */}
         {activeTheme === "light" ? (
           <div

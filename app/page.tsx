@@ -45,7 +45,7 @@ export default function Home() {
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,
-          start: "top 1px",
+          start: "top 50vh",
           onToggle: (self) => {
             gsap.to(
               `.nav-side__rectangle-shape[data-title=${section.current?.dataset.ref}]`,
@@ -76,7 +76,6 @@ export default function Home() {
   }, [localRefs]);
 
   const handleNavigation = (title: string) => {
-    // console.log("title: ", title);
     let selectedElement = localRefs[`${title}Ref`]?.current;
     if (selectedElement) {
       selectedElement.scrollIntoView({
