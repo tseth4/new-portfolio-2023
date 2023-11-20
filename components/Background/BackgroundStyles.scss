@@ -1,0 +1,21 @@
+body[data-theme='atmosphere'] {
+  --activeTheme: url("/atmosphere.png");
+}
+
+body[data-theme='dark'] {
+  --activeTheme: #151515;
+}
+
+body[data-theme='light'] {
+  --activeTheme: #FFF;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: var(--activeTheme);
+  z-index: -1;
+}

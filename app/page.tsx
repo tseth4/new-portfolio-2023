@@ -86,6 +86,7 @@ export default function Home() {
 
   return (
     <main ref={homeRef} className="home">
+      {/* <div className="home__bg"></div> */}
       <NavSide
         ref={navRef}
         // isOnScreen={isOnScreen}
