@@ -77,8 +77,11 @@
 
         width: 100%;
         margin: 0;
+        display: none;
+
 
         @media (min-width: $breakpoint-desktop) {
+          display: block;
           height: 7rem;
           width: 0.25rem;
 
@@ -123,8 +126,6 @@
         display: none;
       }
     }
-
-
 
     &__back-arrow {
       padding: 0.17rem;

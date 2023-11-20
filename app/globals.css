@@ -40,7 +40,8 @@ body[data-theme="dark"] {
   /* --primary-text-color: #F2F2F2; */
   --primary-text-color: #c2c2c2;
   --primary-header-text-color: #F2F2F2;
-  --nav-secondary-text-color: #212121;
+  /* --nav-secondary-text-color: #212121; */
+  --nav-secondary-text-color: #4a4a4a;
   --nav-primary-text-color: #F2F2F2;
   --post-caption-color: #7c7c7c;
 
