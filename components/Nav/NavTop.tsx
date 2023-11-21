@@ -12,7 +12,7 @@ export default function NavTop() {
   const router = useRouter();
   const pathname = usePathname();
   const allThemes = ["dark", "light", "atmosphere"];
-  const [activeTheme, setActiveTheme] = useState(0);
+  const [activeTheme, setActiveTheme] = useState(2);
 
   useEffect(() => {
     console.log("activeTheme: ", allThemes[activeTheme]);

@@ -2,7 +2,7 @@
   "about": {
     "profile_picture": {},
     "h1": "",
-    "paragraph": "Hey, I‘m Tristan, <br><br>I am a Front End Software Developer and enjoy solving problems with code. <br>Currently, I am a free agent working on some personal projects sharpening my skills in Front End Development and design. <br><br>Current stack: JavaScript, TypeScript, Node.js, Next.js, Notion, Macbook Pro 2017 13 inch<br><br>Questions? Constructive feedback?<br><br> Shoot me an email.<br>tristansetha@gmail.com",
+    "paragraph": "Hey, I‘m <span class=\"about__info-name\">Tristan</span>, <br><br>I am a Front End Software Developer and enjoy solving problems with code. <br><br><br>Current stack: JavaScript, TypeScript, Node.js, Next.js, Notion, Macbook Pro 2017 13 inch<br><br>Questions? Constructive feedback?<br><br> Shoot me an email.<br>tristansetha@gmail.com",
     "social_data": [
       {
         "name": "linkedin",

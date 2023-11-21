@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        data-theme="dark"
+        data-theme="atmosphere"
         // style={bodyStyle}
       >
         <NavTop />

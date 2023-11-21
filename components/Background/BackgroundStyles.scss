@@ -7,7 +7,7 @@ body[data-theme='dark'] {
 }
 
 body[data-theme='light'] {
-  --activeTheme: #FFF;
+  --activeTheme: #eed9c4;
 }
 
 .background {
@@ -17,5 +17,6 @@ body[data-theme='light'] {
   right: 0;
   height: 100vh;
   background: var(--activeTheme);
+  background-size: cover;
   z-index: -1;
 }
