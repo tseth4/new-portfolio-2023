@@ -21,7 +21,7 @@ export interface OberserverTypes {
 }
 
 export default function Home() {
-  const navRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
+  // const navRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
 
   const [localRefs, setLocalRefs] = useState<OberserverTypes>({});
 
@@ -88,7 +88,7 @@ export default function Home() {
     <main ref={homeRef} className="home">
       {/* <div className="home__bg"></div> */}
       <NavSide
-        ref={navRef}
+        // ref={navRef}
         // isOnScreen={isOnScreen}
         handleNavigation={handleNavigation}
       />

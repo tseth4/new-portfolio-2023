@@ -11,16 +11,16 @@ import Background from "@/components/Background/Background";
 export default function NavTop() {
   const router = useRouter();
   const pathname = usePathname();
-  const allThemes = ["dark", "light", "atmosphere"];
   const [activeTheme, setActiveTheme] = useState(2);
 
   useEffect(() => {
-    console.log("activeTheme: ", allThemes[activeTheme]);
+    const allThemes = ["dark", "light", "atmosphere"];
+    // console.log("activeTheme: ", allThemes[activeTheme]);
     document.body.dataset.theme = allThemes[activeTheme];
   }, [activeTheme]);
 
   const handleSetActiveTheme = (theme: number) => {
-    console.log("theme: ", theme);
+    // console.log("theme: ", theme);
     // localStorage.setItem("myTheme", theme.toString());
     setActiveTheme(theme);
   };

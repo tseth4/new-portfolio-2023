@@ -3,7 +3,7 @@ import Posts from "@/components/Posts/Posts";
 import { usePathname } from "next/navigation";
 import "./PostsAllStyles.scss";
 
-export default function page() {
+export default function Page() {
   const pathname = usePathname();
 
   return (

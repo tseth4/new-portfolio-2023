@@ -25,7 +25,7 @@ export default function About() {
             <div key={index}>
               <Link href={item.href}>
                 <SocialIcons
-                  color="var(--primary-text-color)"
+                  color="var(--primary-header-text-color)"
                   name={item.name}
                 />
               </Link>

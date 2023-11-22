@@ -31,7 +31,7 @@ export default function Splash() {
         <SplashTristan
           // width={838}
           // height={838}
-          strokeColor={"var(--primary-text-color)"}
+          strokeColor={"var(--splash-color)"}
           strokeWidth={1}
           // fillColor={"var(--primary-text-color)"}
         />
@@ -40,7 +40,7 @@ export default function Splash() {
         <SplashTristan
           // width={838}
           // height={838}
-          strokeColor={"var(--primary-text-color)"}
+          strokeColor={"var(--splash-color)"}
           strokeWidth={1}
           // fillColor={"var(--primary-text-color)"}
         />

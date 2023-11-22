@@ -52,7 +52,9 @@ $item_padding: 0 10%;
 
     &-readmore {
       a {
-        color: var(--primary-text-color)
+        // color: var(--primary-text-color);
+        color: var(--links-color);
+
       }
     }
   }
@@ -66,13 +68,16 @@ $item_padding: 0 10%;
     align-items: center;
     font-size: 0.5rem;
 
+
     &--hide {
       display: none;
     }
 
     &-arrow {
       padding: 0.17rem;
-      border: solid var(--primary-text-color);
+      border: solid var(--links-color);
+      // color: var(--primary-header-text-color);
+
       border-width: 0 0.1rem 0.1rem 0;
       display: inline-block;
       transform: rotate(-45deg);
@@ -93,7 +98,9 @@ $item_padding: 0 10%;
     a {
       // cursor: pointer;
       text-decoration: none;
-      color: var(--primary-text-color);
+      // color: var(--primary-text-color);
+      color: var(--links-color);
+
     }
   }
 }

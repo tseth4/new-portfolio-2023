@@ -1,5 +1,5 @@
 "use client";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import PostsData from "@/data/posts.json";
 import Image from "next/image";
@@ -32,10 +32,9 @@ export interface ContentItemType {
   element_content?: string;
 }
 
-export default function page() {
+export default function Page() {
   const [postContent, setPostContent] = useState("");
   const [currentPost, setCurrentPost] = useState<PostType>();
-  const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {

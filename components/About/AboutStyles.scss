@@ -19,6 +19,13 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    color: var(--primary-text-color);
+
+
+    &-name {
+      font-weight: 700;
+      color: var(--primary-header-text-color);
+    }
 
     @media (min-width: $breakpoint-desktop) {
       text-align: left;
@@ -69,6 +76,8 @@
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
+    // color: var(--primary-header-text-color);
+
 
     svg:hover {
       // transform: scale(1.5);
