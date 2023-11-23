@@ -12,22 +12,19 @@ export default function NavTop() {
   const router = useRouter();
   const pathname = usePathname();
   const [activeTheme, setActiveTheme] = useState(2);
+  const allThemes = ["dark", "light", "atmosphere"];
 
   useEffect(() => {
-    const allThemes = ["dark", "light", "atmosphere"];
-    // console.log("activeTheme: ", allThemes[activeTheme]);
     document.body.dataset.theme = allThemes[activeTheme];
   }, [activeTheme]);
 
   const handleSetActiveTheme = (theme: number) => {
-    // console.log("theme: ", theme);
-    // localStorage.setItem("myTheme", theme.toString());
     setActiveTheme(theme);
   };
 
   return (
     <>
-      <Background />
+      <Background theme={allThemes[activeTheme]} />
       <div className={pathname != "/" ? "nav-top nav-top-back" : "nav-top"}>
         <div
           onClick={() => router.back()}
@@ -44,7 +41,6 @@ export default function NavTop() {
           ></div>
           <span>BACK</span>
         </div>
-        {/* <div className="nav-top__back-arrow"></div> */}
         {activeTheme === 1 ? (
           <div
             onClick={() => handleSetActiveTheme(2)}

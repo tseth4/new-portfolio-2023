@@ -1,5 +1,5 @@
 body[data-theme='atmosphere'] {
-  --activeTheme: url("/atmosphere.png");
+  // --activeTheme: url("/atmosphere.png");
 }
 
 body[data-theme='dark'] {
@@ -19,4 +19,7 @@ body[data-theme='light'] {
   background: var(--activeTheme);
   background-size: cover;
   z-index: -1;
+  &__atmosphere {
+    // position: absolute;
+  }
 }

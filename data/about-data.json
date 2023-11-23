@@ -2,7 +2,7 @@
   "about": {
     "profile_picture": {},
     "h1": "",
-    "paragraph": "Hey, I‘m <span class=\"about__info-name\">Tristan</span>, <br><br>I am a Front End Software Developer and enjoy solving problems with code.<br>>On my freetime you might find me at the gym, drinking coffee or exploring other art mediums that peak my curiosity.<br><br>If you have any questions or constructive feedback shoot me an email: <br> <b>tristansetha@gmail.com</b>",
+    "paragraph": "Hey, I‘m <span class=\"about__info-name\">Tristan</span>, <br><br>I am a Front End Software Developer and enjoy solving problems with code.<br>On my freetime you might find me at the gym, drinking coffee or exploring other art mediums that peak my curiosity.<br><br>If you have any questions or constructive feedback shoot me an email: <br> <b>tristansetha@gmail.com</b>",
     "social_data": [
       {
         "name": "linkedin",
