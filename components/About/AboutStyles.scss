@@ -10,6 +10,7 @@
 
   gap: 1.6rem;
 
+
   @media (min-width: $breakpoint-desktop) {
     flex-direction: row;
     align-items: flex-end;
@@ -25,6 +26,10 @@
     &-name {
       font-weight: 700;
       color: var(--primary-header-text-color);
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      text-align: left;
     }
 
     @media (min-width: $breakpoint-desktop) {
