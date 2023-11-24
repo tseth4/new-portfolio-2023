@@ -5,8 +5,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  // min-height: 100vh;
-  // gap: 10rem;
 
   &__bg {}
 
@@ -17,24 +15,10 @@
     width: 100%;
   }
 
-  // --side-nav-width: 15rem;
-  // --side-nav-margin-left: 5rem;
   &__posts {
     display: flex;
     justify-content: center;
   }
-
-  // &__posts,
-  // &__about {
-  //   @media (min-width: $breakpoint-tablet) {
-  //     margin-left: calc(var(--side-nav-width) + var(--side-nav-margin-left));
-  //   }
-
-  //   @media (min-width: $breakpoint-desktop) {
-  //     margin-left: unset;
-  //   }
-  // }
-
 
   &__about {
     display: flex;

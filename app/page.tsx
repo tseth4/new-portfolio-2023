@@ -42,6 +42,11 @@ export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
     let refsArr = Object.values(localRefs);
     const ctx = gsap.context(() => {
+      // gsap.set(".nav-side__rectangle-shape", { height: 0 });
+      // gsap.set(".nav-side__rectangle-title", { opacity: 0 });
+      gsap.to(".nav-side__rectangle-shape", { height: "7rem" });
+      gsap.to(".nav-side__rectangle-title", { opacity: 1 });
+
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,

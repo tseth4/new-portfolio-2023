@@ -10,19 +10,25 @@ export default function Splash() {
   const splashTristanBottom = useRef(null);
 
   useLayoutEffect(() => {
+    gsap.to(".splash__image", { opacity: 1 });
     gsap.to(splashTristanTop.current, {
       duration: 1,
       x: 9,
       y: -9,
     });
-  }, []);
-
-  useLayoutEffect(() => {
     gsap.to(splashTristanBottom.current, {
       duration: 1,
       x: -9,
       y: 9,
     });
+  }, []);
+
+  useLayoutEffect(() => {
+    // gsap.to(splashTristanBottom.current, {
+    //   duration: 1,
+    //   x: -9,
+    //   y: 9,
+    // });
   }, []);
 
   return (
