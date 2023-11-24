@@ -24,16 +24,16 @@
     justify-content: center;
   }
 
-  &__posts,
-  &__about {
-    @media (min-width: $breakpoint-tablet) {
-      margin-left: calc(var(--side-nav-width) + var(--side-nav-margin-left));
-    }
+  // &__posts,
+  // &__about {
+  //   @media (min-width: $breakpoint-tablet) {
+  //     margin-left: calc(var(--side-nav-width) + var(--side-nav-margin-left));
+  //   }
 
-    @media (min-width: $breakpoint-desktop) {
-      margin-left: unset;
-    }
-  }
+  //   @media (min-width: $breakpoint-desktop) {
+  //     margin-left: unset;
+  //   }
+  // }
 
 
   &__about {

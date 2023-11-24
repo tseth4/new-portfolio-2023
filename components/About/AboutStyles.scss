@@ -11,9 +11,15 @@
   gap: 1.6rem;
 
 
+  @media (min-width: $breakpoint-tablet) {
+    padding: auto;
+    width: 60%;
+  }
   @media (min-width: $breakpoint-desktop) {
+    padding: 0 10%; 
     flex-direction: row;
     align-items: flex-end;
+    width: unset;
   }
 
   &__info {
@@ -97,7 +103,7 @@
     //   cursor: pointer;
     // }
 
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-tablet) {
       justify-content: flex-start;
     }
   }
