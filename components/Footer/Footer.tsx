@@ -8,7 +8,7 @@ export default function Footer() {
     <div className="footer">
       <div className="footer__social-links">
         {AboutData.about.social_data.map((item, index) => (
-          <div key={index}>
+          <div className={"footer__" + item.name + " footer__social-icon"} key={index}>
             <Link href={item.href}>
               <SocialIcons
                 color="var(--primary-header-text-color)"

@@ -44,6 +44,7 @@ export default function Home() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     let refsArr = Object.values(localRefs);
+    let socialIcons = document.querySelectorAll(".footer__social-icons");
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ defaults: { duration: 0.5 } });
 
@@ -52,7 +53,14 @@ export default function Home() {
         .to(".nav-side__rectangle-title", { opacity: 1 }, 0.5)
         .to(".splash2__intro", { top: 0, opacity: 1, duration: 0.4 }, 0.5)
         .to(".splash2__name", { top: 0, opacity: 1, duration: 0.4 }, 0.6)
-        .to(".splash2__description", { top: 0, opacity: 1, duration: 0.4 }, 0.7);
+        .to(".splash2__description", { top: 0, opacity: 1, duration: 0.4 }, 0.7)
+        .to(".footer__cv", { top: 0 }, 0.8)
+        .to(".footer__github", { top: 0 }, 0.9)
+        .to(".footer__codepen", { top: 0 }, 1)
+        .to(".footer__linkedin", { top: 0 }, 1.1);
+      // socialIcons.forEach((el, index) => {
+      //   tl.current?.to(el.className, { top: 0 });
+      // });
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,
