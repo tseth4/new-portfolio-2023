@@ -1,7 +1,7 @@
 "use client";
 import "./HomeStyles.scss";
 import NavSide from "@/components/Nav/NavSide";
-import Splash from "@/components/Splash/Splash";
+// import Splash from "@/components/Splash/Splash";
 import Posts from "@/components/Posts/Posts";
 import About from "@/components/About/About";
 import {
@@ -15,6 +15,8 @@ import {
 // import useOnScreen from "@/hooks/useOnScreen";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Splash2 from "@/components/Splash/Splash2";
+import Footer from "@/components/Footer/Footer";
 
 export interface OberserverTypes {
   [key: string]: RefObject<HTMLElement>;
@@ -42,11 +44,8 @@ export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
     let refsArr = Object.values(localRefs);
     const ctx = gsap.context(() => {
-      // gsap.set(".nav-side__rectangle-shape", { height: 0 });
-      // gsap.set(".nav-side__rectangle-title", { opacity: 0 });
-      gsap.to(".nav-side__rectangle-shape", { height: "7rem" });
-      gsap.to(".nav-side__rectangle-title", { opacity: 1 });
-
+      gsap.to(".nav-side__rectangle-shape", { height: "7rem", duration: 1 });
+      gsap.to(".nav-side__rectangle-title", { opacity: 1, duration: 1 });
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,
@@ -103,7 +102,7 @@ export default function Home() {
         id="splash"
         className="home__splash"
       >
-        <Splash />
+        <Splash2 />
       </div>
       <div data-ref="posts" ref={postsRef} id="posts" className="home__posts">
         <Posts posts={3} />
@@ -111,6 +110,7 @@ export default function Home() {
       <div data-ref="about" ref={aboutRef} id="about" className="home__about">
         <About />
       </div>
+      <Footer/>
     </main>
   );
 }

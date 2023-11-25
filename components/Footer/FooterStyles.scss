@@ -1,0 +1,36 @@
+@import '@/lib/breakpoints';
+
+.footer {
+  position: fixed;
+  right: 0;
+  top: auto;
+  bottom: 0;
+
+  // bottom: 6rem;
+  right: 2rem;
+
+  &__social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    // >div:last-of-type::after {
+    //   content: "";
+    //   display: block;
+    //   width: 1.1px;
+    //   height: 9rem;
+    //   margin: 19px auto 0 auto;
+    //   background-color: #FFF;
+    // }
+
+    svg:hover {
+      animation: pulse 0.5s ease-in infinite;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      justify-content: flex-start;
+    }
+  }
+}

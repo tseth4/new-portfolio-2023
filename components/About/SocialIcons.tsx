@@ -66,8 +66,8 @@ export default function SocialIcons({ color, name }: SocialIconsProps) {
         </svg>
       ) : name === "cv" ? (
         <svg
-          width="26"
-          height="16"
+          width="20"
+          height="19"
           viewBox="0 0 26 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

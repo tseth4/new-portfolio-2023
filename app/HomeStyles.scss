@@ -9,6 +9,7 @@
   &__bg {}
 
   &__splash,
+  &__splash2,
   &__posts,
   &__about {
     height: 100vh;
@@ -18,6 +19,12 @@
   &__posts {
     display: flex;
     justify-content: center;
+  }
+
+  &__splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__about {

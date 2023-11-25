@@ -20,7 +20,7 @@ export default function About() {
         <h1>{AboutData.about.h1}</h1>
         <div dangerouslySetInnerHTML={{ __html: AboutData.about.paragraph }}/>
         {/* <p>{AboutData.about.paragraph}</p> */}
-        <div className="about__social-links">
+        {/* <div className="about__social-links">
           {AboutData.about.social_data.map((item, index) => (
             <div key={index}>
               <Link href={item.href}>
@@ -31,7 +31,7 @@ export default function About() {
               </Link>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
