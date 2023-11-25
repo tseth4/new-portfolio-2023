@@ -31,6 +31,7 @@ export default function Home() {
   const aboutRef = useRef<null | HTMLDivElement>(null);
   const splashRef = useRef<null | HTMLDivElement>(null);
   const homeRef = useRef<null | HTMLDivElement>(null);
+  const tl = useRef<null | gsap.core.Timeline>();
 
   useEffect(() => {
     setLocalRefs({
@@ -44,8 +45,14 @@ export default function Home() {
     gsap.registerPlugin(ScrollTrigger);
     let refsArr = Object.values(localRefs);
     const ctx = gsap.context(() => {
-      gsap.to(".nav-side__rectangle-shape", { height: "7rem", duration: 1 });
-      gsap.to(".nav-side__rectangle-title", { opacity: 1, duration: 1 });
+      tl.current = gsap.timeline({ defaults: { duration: 0.5 } });
+
+      tl.current
+        .to(".nav-side__rectangle-shape", { height: "7rem" })
+        .to(".nav-side__rectangle-title", { opacity: 1 })
+        .to(".splash2__intro", { top: 0, opacity: 1 })
+        .to(".splash2__name", { top: 0, opacity: 1 })
+        .to(".splash2__description", { top: 0, opacity: 1 });
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,
@@ -110,7 +117,7 @@ export default function Home() {
       <div data-ref="about" ref={aboutRef} id="about" className="home__about">
         <About />
       </div>
-      <Footer/>
+      <Footer />
     </main>
   );
 }
