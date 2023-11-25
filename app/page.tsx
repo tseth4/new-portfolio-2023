@@ -48,11 +48,11 @@ export default function Home() {
       tl.current = gsap.timeline({ defaults: { duration: 0.5 } });
 
       tl.current
-        .to(".nav-side__rectangle-shape", { height: "7rem" })
-        .to(".nav-side__rectangle-title", { opacity: 1 })
-        .to(".splash2__intro", { top: 0, opacity: 1 })
-        .to(".splash2__name", { top: 0, opacity: 1 })
-        .to(".splash2__description", { top: 0, opacity: 1 });
+        .to(".nav-side__rectangle-shape", { height: "7rem" }, 0)
+        .to(".nav-side__rectangle-title", { opacity: 1 }, 0.5)
+        .to(".splash2__intro", { top: 0, opacity: 1, duration: 0.4 }, 0.5)
+        .to(".splash2__name", { top: 0, opacity: 1, duration: 0.4 }, 0.6)
+        .to(".splash2__description", { top: 0, opacity: 1, duration: 0.4 }, 0.7);
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,
