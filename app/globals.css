@@ -35,6 +35,7 @@ body[data-theme="light"] {
   --nav-secondary-text-color: #949494;
   --nav-primary-text-color: black;
   --post-caption-color: #7c7c7c;
+  --modal-background: #FFF;
 }
 
 body[data-theme="dark"] {
@@ -48,6 +49,7 @@ body[data-theme="dark"] {
   --nav-secondary-text-color: #4a4a4a;
   --nav-primary-text-color: #F2F2F2;
   --post-caption-color: #7c7c7c;
+  --modal-background: #111111;
 
 }
 
@@ -62,7 +64,7 @@ body[data-theme="atmosphere"] {
   --nav-secondary-text-color: #4a4a4a;
   --nav-primary-text-color: #F2F2F2;
   --post-caption-color: #7c7c7c;
-
+  --modal-background: url("/contact-modal-bg-v2.png");
 }
 
 body[data-theme="atmosphere"] {
@@ -72,4 +74,9 @@ body[data-theme="atmosphere"] {
 body {
   background: var(--background);
   color: var(--primary-text-color);
+}
+
+.modal--opened {
+  margin: 0;
+  overflow: hidden;
 }
