@@ -1,12 +1,16 @@
 import "./AboutStyles.scss";
 import AboutData from "@/data/about-data.json";
 import Button from "../Button/Button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useFormspark } from "@formspark/use-formspark";
+// import reCAPTCHA from "react-google-recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const FORMSPARK_FORM_ID = "CwS48rGng";
 
 export default function About() {
+  const captchaRef = useRef<ReCAPTCHA>(null);
+
   const [isModalClassNameChanged, setModalClassNameChanged] = useState(false);
   const [form, setForm] = useState({});
 
@@ -22,9 +26,24 @@ export default function About() {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
-    await submit(form);
-    alert("Form submitted");
-    handleContactModal(e);
+    if (captchaRef && captchaRef.current) {
+      const token = captchaRef.current?.getValue();
+      // const response = await fetch("/api", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({ form, token }),
+      // }).catch((e) => console.log("contact submission error: ", e));
+      // if (response && response.ok) {
+      //   console.log("response: ", response)
+      setForm({ ...form, "g-recaptcha-response": token });
+      await submit(form);
+      alert("Form submitted");
+      captchaRef.current?.reset();
+      handleContactModal(e);
+      // }
+    }
   };
 
   useEffect(() => {
@@ -48,7 +67,7 @@ export default function About() {
   return (
     <>
       <div className="about">
-        <form onSubmit={onSubmit} className={modalClassName}>
+        <form method="POST" onSubmit={onSubmit} className={modalClassName}>
           <h2>Say Hello! 👋</h2>
           <input
             type="text"
@@ -73,6 +92,15 @@ export default function About() {
             onChange={(e) => setForm({ ...form, message: e.target.value })}
             placeholder="message"
           />
+          {process.env.GOOGLE_RECAPTCHA_SITE_KEY ? (
+            <ReCAPTCHA
+              ref={captchaRef}
+              sitekey={process.env.GOOGLE_RECAPTCHA_SITE_KEY}
+            />
+          ) : (
+            ""
+          )}
+
           <Button type="submit" disabled={submitting}>
             Send
           </Button>
