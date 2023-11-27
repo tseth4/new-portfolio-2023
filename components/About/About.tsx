@@ -28,6 +28,7 @@ export default function About() {
     e.preventDefault();
     if (captchaRef && captchaRef.current) {
       const token = captchaRef.current?.getValue();
+      console.log("recaptcha token: ", token)
       // const response = await fetch("/api", {
       //   method: "POST",
       //   headers: {
@@ -37,11 +38,14 @@ export default function About() {
       // }).catch((e) => console.log("contact submission error: ", e));
       // if (response && response.ok) {
       //   console.log("response: ", response)
-      setForm({ ...form, "g-recaptcha-response": token });
-      await submit(form);
-      alert("Form submitted");
-      captchaRef.current?.reset();
-      handleContactModal(e);
+      // setForm({ ...form, "g-recaptcha-response": token });
+      if (token) {
+        await submit(form);
+        alert("Form submitted");
+        captchaRef.current?.reset();
+        handleContactModal(e);
+      }
+
       // }
     }
   };
