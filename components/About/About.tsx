@@ -6,7 +6,7 @@ import { useFormspark } from "@formspark/use-formspark";
 // import reCAPTCHA from "react-google-recaptcha";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const FORMSPARK_FORM_ID = "CwS48rGng";
+const FORMSPARK_FORM_ID = process.env.FORMSPARK_FORM_ID;
 
 export default function About() {
   const captchaRef = useRef<ReCAPTCHA>(null);
@@ -15,7 +15,7 @@ export default function About() {
   const [form, setForm] = useState({});
 
   const [submit, submitting] = useFormspark({
-    formId: FORMSPARK_FORM_ID,
+    formId: FORMSPARK_FORM_ID || "",
   });
 
   const handleContactModal = (
