@@ -18,10 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script
+        id="gtm-script"
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTM_ID}`}
       ></Script>
-      <Script>
+      <Script id="gtm-script-datalayer">
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
