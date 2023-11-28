@@ -3,7 +3,6 @@ import AboutData from "@/data/about-data.json";
 import Button from "../Button/Button";
 import { useState, useEffect, useRef } from "react";
 import { useFormspark } from "@formspark/use-formspark";
-// import reCAPTCHA from "react-google-recaptcha";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const FORMSPARK_FORM_ID = process.env.FORMSPARK_FORM_ID;
