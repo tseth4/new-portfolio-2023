@@ -29,7 +29,7 @@ export default function About() {
     e.preventDefault();
     if (captchaRef && captchaRef.current) {
       const token = captchaRef.current?.getValue();
-      console.log("token: ", token);
+      // console.log("token: ", token);
       if (token) {
         setSendBtnText("Sending...");
         let response = await fetch("/api", {
