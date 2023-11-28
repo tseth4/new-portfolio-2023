@@ -44,7 +44,7 @@ export default function Home() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     let refsArr = Object.values(localRefs);
-    let socialIcons = document.querySelectorAll(".footer__social-icons");
+    // let socialIcons = document.querySelectorAll(".footer__social-icons");
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ defaults: { duration: 0.5 } });
 
