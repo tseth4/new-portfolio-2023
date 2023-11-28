@@ -8,7 +8,7 @@ export default function Splash2() {
       </div>
       <div className="splash2__name">Tristan Setha</div>
       <div className="splash2__description">
-        I am a Front End Software Developer based in Seattle, WA
+        I am a Software Developer based in Seattle, WA
       </div>
     </div>
   );
