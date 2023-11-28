@@ -185,6 +185,10 @@
       background: transparent;
       // border: 1px solid white;
       color: var(--primary-text-color);
+
+      &:hover {
+        animation: pulse 0.5s ease-in infinite;
+      }
     }
   }
 

@@ -67,7 +67,7 @@ export default function About() {
     <>
       <div className="about">
         <form method="POST" onSubmit={onSubmit} className={modalClassName}>
-          <h2>Say hello</h2>
+          <h2>Say hello 🙂</h2>
           <input
             type="text"
             id="about__contact-input-name"

@@ -153,6 +153,9 @@
       img {
         height: 1.3rem;
         width: 1.3rem;
+        &:hover {
+          animation: pulse 0.5s ease-in infinite;
+        }
       }
     }
   }
