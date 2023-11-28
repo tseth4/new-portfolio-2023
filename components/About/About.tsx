@@ -67,7 +67,7 @@ export default function About() {
     <>
       <div className="about">
         <form method="POST" onSubmit={onSubmit} className={modalClassName}>
-          <h2>Say Hello! 👋</h2>
+          <h2>Say hello</h2>
           <input
             type="text"
             id="about__contact-input-name"
@@ -100,7 +100,11 @@ export default function About() {
             ""
           )}
 
-          <Button type="submit" disabled={submitting}>
+          <Button
+            classname="about__contact-submit-btn"
+            type="submit"
+            disabled={submitting}
+          >
             Send
           </Button>
         </form>

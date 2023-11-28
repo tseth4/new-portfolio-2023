@@ -117,7 +117,7 @@
   &__contact-modal {
 
     display: none;
-    width: 100%;
+    // width: 100%;
     border-radius: 1rem;
 
     &--opened {
@@ -126,12 +126,16 @@
       display: flex;
       gap: 1rem;
       flex-direction: column;
-      width: 50%;
+      width: 90%;
       padding: 2.5rem;
       justify-content: flex-end;
       align-items: flex-start;
       background: var(--modal-background);
       background-size: cover;
+
+      @media (min-width: $breakpoint-tablet) {
+        width: 50%;
+      }
 
       input,
       textarea {
@@ -182,6 +186,14 @@
       // border: 1px solid white;
       color: var(--primary-text-color);
     }
+  }
+
+  &__contact-submit-btn {
+    background-color: var(--cta-bg-color);
+    color: var(--cta-color);
+    // width: 100%;
+    border: none;
+    padding: 0.35rem 3rem !important;
   }
 
 }

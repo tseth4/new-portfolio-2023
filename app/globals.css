@@ -36,6 +36,8 @@ body[data-theme="light"] {
   --nav-primary-text-color: black;
   --post-caption-color: #7c7c7c;
   --modal-background: #FFF;
+  --cta-bg-color: #000000;
+  --cta-color: #FFF;
 }
 
 body[data-theme="dark"] {
@@ -50,11 +52,14 @@ body[data-theme="dark"] {
   --nav-primary-text-color: #F2F2F2;
   --post-caption-color: #7c7c7c;
   --modal-background: #111111;
+  --cta-bg-color: #FFF;
+  --cta-color: #000000;
+
 
 }
 
 body[data-theme="atmosphere"] {
-  --background: #151515;
+  /* --background: #151515; */
   /* --primary-text-color: #F2F2F2; */
   --splash-color: #FFF;
   --primary-text-color: #cdcdcd;
@@ -65,10 +70,14 @@ body[data-theme="atmosphere"] {
   --nav-primary-text-color: #F2F2F2;
   --post-caption-color: #7c7c7c;
   --modal-background: url("/contact-modal-bg-v2.png");
+  --cta-bg-color: #D88546;
+  --cta-color: #FFF;
+
 }
 
 body[data-theme="atmosphere"] {
-  --background: #FFF;
+  /* --background: #FFF; */
+
 }
 
 body {
