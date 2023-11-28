@@ -9,6 +9,8 @@ const FORMSPARK_FORM_ID = process.env.FORMSPARK_FORM_ID;
 
 export default function About() {
   const captchaRef = useRef<ReCAPTCHA>(null);
+  const [sendBtnText, setSendBtnText] = useState("Send");
+  const [contactError, setContactError] = useState("");
 
   const [isModalClassNameChanged, setModalClassNameChanged] = useState(false);
   const [form, setForm] = useState({});
@@ -27,20 +29,29 @@ export default function About() {
     e.preventDefault();
     if (captchaRef && captchaRef.current) {
       const token = captchaRef.current?.getValue();
-      let response = await fetch("/api", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({ token }),
-      }).catch((e) => console.log("contact submission error: ", e));
-      if (response && response.ok) {
-        let data = await response.json();
-        if (data && data.response.success) {
-          await submit(form);
-          captchaRef.current?.reset();
-          handleContactModal(e);
+      console.log("token: ", token);
+      if (token) {
+        setSendBtnText("Sending...");
+        let response = await fetch("/api", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({ token }),
+        }).catch((e) => {
+          console.log("reCaptcha verification error: ", e);
+          setContactError("reCaptcha verification error");
+        });
+        if (response && response.ok) {
+          let data = await response.json();
+          if (data && data.response.success) {
+            await submit(form);
+            captchaRef.current?.reset();
+            handleContactModal(e);
+          }
         }
+      } else {
+        setContactError("reCaptcha error");
       }
     }
   };
@@ -67,6 +78,7 @@ export default function About() {
       <div className="about">
         <form method="POST" onSubmit={onSubmit} className={modalClassName}>
           <h2>Say hello 🙂</h2>
+          <p>{contactError}</p>
           <input
             type="text"
             id="about__contact-input-name"
@@ -104,7 +116,7 @@ export default function About() {
             type="submit"
             disabled={submitting}
           >
-            Send
+            {sendBtnText}
           </Button>
         </form>
 
