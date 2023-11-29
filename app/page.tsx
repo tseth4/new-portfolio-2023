@@ -71,10 +71,10 @@ export default function Home() {
               {
                 duration: 0.2,
                 backgroundColor: self.isActive
-                  ? "var(--nav-primary-text-color)"
+                  ? "var(--nav-rect-bg-color)"
                   : "transparent",
                 boxShadow: self.isActive
-                  ? " 0px 0px 1rem var(--nav-primary-text-color)"
+                  ? " 0px 0px 1rem var(--nav-rect-shadow-color)"
                   : "",
               }
             );
