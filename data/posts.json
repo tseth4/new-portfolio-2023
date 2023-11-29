@@ -146,13 +146,9 @@
         },
         {
           "type": "p",
-          "header": "Design and Development Process:",
+          "header": "Technologies",
           "header_type": "h2",
           "element_content": "The website was developed using EAS’s internal tooling, which incorporates Gulp.js, PHP, Node.js, Sass, the GreenSock Animation Library, and HTML5 Web Components."
-        },
-        {
-          "type": "p",
-          "element_content": "We approached the development process from a data-driven approach to facilitate easy client updates. This involved decoupling data such as hero names, assets, questions, and points from code, which underwent frequent changes during the development process. To achieve this flexibility, we stored data in CSV files and parsed into JSON format."
         }
       ]
     },
