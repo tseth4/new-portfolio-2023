@@ -5,7 +5,27 @@
   right: 0;
   top: auto;
   bottom: 0;
-  right: 2rem;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-size: 0.25rem;
+
+  >div:first-of-type {
+    opacity: 0.5;
+  }
+  >div > span:nth-of-type(3)::after {
+    content: " ";
+    display: block;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    >div > span:nth-of-type(3)::after {
+      content: " ";
+      display: none;
+    }
+  }
 
   &__social-icon {
     position: relative;
