@@ -11,7 +11,7 @@ export default function Footer() {
           <div className={"footer__" + item.name + " footer__social-icon"} key={index}>
             <Link href={item.href}>
               <SocialIcons
-                color="var(--primary-header-text-color)"
+                color="var(--primary-text-color)"
                 name={item.name}
               />
             </Link>

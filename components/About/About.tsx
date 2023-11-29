@@ -69,6 +69,7 @@ export default function About() {
   const modalClassName = isModalClassNameChanged
     ? "about__contact-modal about__contact-modal--opened"
     : "about__contact-modal";
+
   const modalBgOverlayClassName = isModalClassNameChanged
     ? "about__bg-overlay about__bg-overlay--opened"
     : "about__bg-overlay";
