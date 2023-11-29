@@ -36,6 +36,8 @@ body[data-theme="light"] {
   --links-color: #000000;
   --nav-secondary-text-color: #949494;
   --nav-primary-text-color: black;
+  --nav-rect-bg-color: #FFF;
+  --nav-rect-shadow-color: #000000;
   --post-caption-color: #7c7c7c;
   --modal-background: #FFF;
   --cta-bg-color: #000000;
@@ -54,6 +56,8 @@ body[data-theme="dark"] {
   /* --nav-secondary-text-color: #212121; */
   --nav-secondary-text-color: #4a4a4a;
   --nav-primary-text-color: #F2F2F2;
+  --nav-rect-bg-color: #F2F2F2;
+  --nav-rect-shadow-color: #F2F2F2;
   --post-caption-color: #7c7c7c;
   --modal-background: #111111;
   --cta-bg-color: #FFF;
@@ -73,6 +77,8 @@ body[data-theme="atmosphere"] {
   /* --nav-secondary-text-color: #212121; */
   --nav-secondary-text-color: #4a4a4a;
   --nav-primary-text-color: #F2F2F2;
+  --nav-rect-bg-color: #F2F2F2;
+  --nav-rect-shadow-color: #F2F2F2;
   --post-caption-color: #7c7c7c;
   --modal-background: url("/contact-modal-bg-v2.png");
   --cta-bg-color: #D88546;
