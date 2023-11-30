@@ -38,17 +38,6 @@
         "src": "/social_icons/github.svg",
         "alt": "github icon",
         "class": "about__social-links-icon"
-      },
-      {
-        "name": "cv",
-        "size": {
-          "width": 20,
-          "height": 20
-        },
-        "href": "/setha_tristan_cv.docx",
-        "src": "/social_icons/cv.svg",
-        "alt": "cv icon",
-        "class": "about__social-links-icon"
       }
     ]
   }
