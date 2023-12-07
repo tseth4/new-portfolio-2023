@@ -32,8 +32,9 @@ $item_padding: 0 10%;
 
     width: 100%;
 
-    &:nth-child(3),
-    &:nth-child(4) {
+    // if route home
+    // else display
+    &[data-page="home"]:nth-child(n+3) {
       display: none;
     }
 
@@ -44,8 +45,12 @@ $item_padding: 0 10%;
       display: grid;
       grid-template-rows: 4fr 1fr 0.5fr 0.5fr;
 
-      &:nth-child(3),
-      &:nth-child(4) {
+      // &:nth-child(3),
+      // &:nth-child(4) {
+      //   display: grid;
+      // }
+
+      &[data-page="home"]:nth-child(n+3) {
         display: grid;
       }
     }

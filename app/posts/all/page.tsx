@@ -10,7 +10,10 @@ export default function Page() {
     <div className="posts-all">
       <div className="posts-all__container">
         {/* <div className="posts-all__title">Posts</div> */}
-        <Posts posts="all" pathname={pathname} />
+        <Posts
+          numberOfPosts="all"
+          //  pathname={pathname}
+        />
       </div>
     </div>
   );

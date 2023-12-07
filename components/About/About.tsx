@@ -69,10 +69,6 @@ export default function About() {
   }, []);
 
   useEffect(() => {
-    console.log("scrollY: ", scrollY);
-  }, [scrollY]);
-
-  useEffect(() => {
     let body = document.querySelector("body");
 
     if (isModalClassNameChanged) {

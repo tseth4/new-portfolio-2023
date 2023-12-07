@@ -1,21 +1,26 @@
 import PostsData from "@/data/posts.json";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation";
 
 import "./PostsStyles.scss";
 
 interface PostProps {
   numberOfPosts: "all" | number;
-  pathname?: string;
 }
 
-export default function Posts({ numberOfPosts, pathname }: PostProps) {
+export default function Posts({ numberOfPosts }: PostProps) {
+  const pathname = usePathname();
   let posts_length: number =
     numberOfPosts === "all" ? PostsData.posts.length : numberOfPosts;
   return (
     <div className="posts">
       {PostsData.posts.slice(0, posts_length).map((post, index) => (
-        <div className="posts__card" key={index}>
+        <div
+          data-page={pathname === "/" ? "home" : "all"}
+          className="posts__card"
+          key={index}
+        >
           <div className="posts__card-preview-img">
             <Image fill={true} src={post?.preview_image} alt="Preview image" />
           </div>
