@@ -1,7 +1,7 @@
 import PostsData from "@/data/posts.json";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import "./PostsStyles.scss";
 
