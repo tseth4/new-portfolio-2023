@@ -4,8 +4,9 @@
       "title": "AWS re:Invent",
       "author": "Tristan Setha",
       "date": "2023-10-23",
+      "preview_image": "/aws-reinvent.jpg",
       "header_image": "/aws-reinvent.jpg",
-      "preview_content": "At EAS I had the opportunity to work alongside a team of designers, project managers, and other engineers to develop an online personality test platform for the AWS Reinvent event.",
+      "preview_content": "An online personality test platform for the AWS Reinvent event.",
       "tags": [
         "project"
       ],
@@ -155,12 +156,13 @@
     {
       "title": "TDECU Map Locator",
       "author": "Tristan Setha",
-      "date": "2023-10-23",
+      "date": "2023-09-23",
+      "preview_image": "/tdecu_desktop.png",
       "header_image": "",
       "tags": [
         "project"
       ],
-      "preview_content": "A web application designed to help TDECU members find dealerships associated with TDECU",
+      "preview_content": "A web application designed to help TDECU members find dealerships associated with TDECU.",
       "post_content": [
         {
           "type": "p",
@@ -196,6 +198,125 @@
           "header": "Technologies",
           "header_type": "h2",
           "element_content": "The application was built using a stack that includes Google Maps API, Gulp.js, PHP, Node.js, Sass, and HTML5 Web Components."
+        }
+      ]
+    },
+    {
+      "title": "Pomodoro Timer",
+      "author": "Tristan Setha",
+      "date": "2021-10-05",
+      "preview_image": "/pomodoro.png",
+      "header_image": "",
+      "tags": [
+        "project"
+      ],
+      "preview_content": "A simple pomodoro timer.",
+      "post_content": [
+        {
+          "type": "p",
+          "header": "Introduction",
+          "header_type": "h2",
+          "element_content": "A simple pomodoro timer with animated circular progress bar and customizable colors and fonts"
+        },
+        {
+          "type": "img",
+          "image_container": true,
+          "image_container_class": "post__content-tdecu-container",
+          "image_src": [
+            "/pomodoro.png"
+          ],
+          "image_caption": [
+            "Pomodoro App - Desktop"
+          ],
+          "image_alt": [
+            "Pomodoro App - Desktop"
+          ],
+          "image_class": [
+            "post__content-pomodoro-img"
+          ]
+        },
+        {
+          "type": "p",
+          "header": "Technologies",
+          "header_type": "h2",
+          "element_content": "<div><span>Next.js</span>, <span>React.js</span>, <span>emotion with Styled Components</span></div>"
+        },
+        {
+          "type": "p",
+          "class": "post__content-links",
+          "header": "Links",
+          "header_type": "h2",
+          "element_content": "<a href='https://pomodoro-app-two.vercel.app/'>- Live site</a><br><a href='https://github.com/tseth4/pomodoro-app'>- Repo</a>"
+        }
+      ]
+    },
+    {
+      "title": "Github User Search",
+      "author": "Tristan Setha",
+      "date": "2021-10-05",
+      "preview_image": "/github-user-search.png",
+      "header_image": "",
+      "tags": [
+        "project"
+      ],
+      "preview_content": "A simple pomodoro timer.",
+      "post_content": [
+        {
+          "type": "p",
+          "header": "Introduction",
+          "header_type": "h2",
+          "element_content": "A simple UI that utilizes Github api to search for users"
+        },
+        {
+          "type": "img",
+          "image_container": true,
+          "image_container_class": "post__content-tdecu-container",
+          "image_src": [
+            "/github-user-search.png"
+          ],
+          "image_caption": [
+            "Github User Search Desktop image - dark mode"
+          ],
+          "image_alt": [
+            "Github User Search Desktop image - dark mode"
+          ],
+          "image_class": [
+            "post__content-github"
+          ]
+        },
+        {
+          "type": "img",
+          "image_container": true,
+          "image_container_class": "post__content-github-container",
+          "image_src": [
+            "/github-user-search-tablet.png",
+            "/github-user-search-mobile.png"
+          ],
+          "image_caption": [
+            "Github User Search tablet image - light mode",
+            "Github User Search mobile image - light mode"
+          ],
+          "image_alt": [
+            "Github User Search tablet image - light mode",
+            "Github User Search mobile image - light mode"
+          ],
+          "image_class": [
+            "post__content-github-tablet",
+            "post__content-github-mobile"
+          ]
+        },
+        {
+          "type": "p",
+          "header": "Technologies",
+          "header_type": "h2",
+          "element_content": "<div><span>Next.js</span>, <span>React.js</span>, <span>emotion with Styled Components</span></div>"
+        },
+        {
+          "type": "p",
+          "class": "post__content-links",
+          "header": "Links",
+          "header_type": "h2",
+          "element_content": "<a href='https://github-user-search-app-tristansetha.vercel.app/'>- Live site</a><br><a href='https://github.com/tseth4/github-user-search-app'>- Repo</a>"
         }
       ]
     }

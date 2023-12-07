@@ -64,7 +64,7 @@ export default function Home() {
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,
-          start: "top 50vh",
+          start: "top 50vh", // when top of trigger is 50%vh of the view port
           onToggle: (self) => {
             gsap.to(
               `.nav-side__rectangle-shape[data-title=${section.current?.dataset.ref}]`,
@@ -120,7 +120,7 @@ export default function Home() {
         <Splash2 />
       </div>
       <div data-ref="posts" ref={postsRef} id="posts" className="home__posts">
-        <Posts posts={3} />
+        <Posts numberOfPosts={4} />
       </div>
       <div data-ref="about" ref={aboutRef} id="about" className="home__about">
         <About />

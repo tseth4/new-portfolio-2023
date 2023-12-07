@@ -32,6 +32,7 @@ body[data-theme="light"] {
   --splash-name-color: #3260fc;
   --header-font: 'Playfair Display', serif;
   --primary-text-color: #000026FF;
+  --primary-cta-color: #FFF;
   --primary-header-text-color: #3260fc;
   --links-color: #000000;
   --nav-secondary-text-color: #949494;
@@ -51,6 +52,7 @@ body[data-theme="dark"] {
   --splash-color: #FFF;
   --splash-name-color: #3260fc;
   --primary-text-color: #c2c2c2;
+  --primary-cta-color: #c2c2c2;
   --primary-header-text-color: #3260fc;
   --links-color: #F2F2F2;
   /* --nav-secondary-text-color: #212121; */
@@ -72,6 +74,7 @@ body[data-theme="atmosphere"] {
   --splash-color: #FFF;
   --splash-name-color: #FFF;
   --primary-text-color: #cdcdcd;
+  --primary-cta-color: #cdcdcd;
   --primary-header-text-color: #e9e9e9;
   --links-color: #cdcdcd;
   /* --nav-secondary-text-color: #212121; */

@@ -1,7 +1,7 @@
 import "./AboutStyles.scss";
 import AboutData from "@/data/about-data.json";
 import Button from "../Button/Button";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, CSSProperties } from "react";
 import { useFormspark } from "@formspark/use-formspark";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -9,6 +9,7 @@ const FORMSPARK_FORM_ID = process.env.FORMSPARK_FORM_ID;
 
 export default function About() {
   const captchaRef = useRef<ReCAPTCHA>(null);
+  const [scrollY, setScrollY] = useState(0);
   const [sendBtnText, setSendBtnText] = useState("Send");
   const [contactError, setContactError] = useState("");
 
@@ -57,6 +58,21 @@ export default function About() {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY || window.pageYOffset);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log("scrollY: ", scrollY);
+  }, [scrollY]);
+
+  useEffect(() => {
     let body = document.querySelector("body");
 
     if (isModalClassNameChanged) {
@@ -77,49 +93,55 @@ export default function About() {
   return (
     <>
       <div className="about">
-        <form method="POST" onSubmit={onSubmit} className={modalClassName}>
-          <h2>Say hello 🙂</h2>
-          <p>{contactError}</p>
-          <input
-            type="text"
-            id="about__contact-input-name"
-            name="name"
-            required={true}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-            placeholder="name"
-          />
-          <input
-            type="text"
-            id="about__contact-input-email"
-            name="email"
-            required={true}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-            placeholder="email"
-          />
-          <textarea
-            id="about__contact-input-message"
-            name="message"
-            required={true}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-            placeholder="message"
-          />
-          {process.env.GOOGLE_RECAPTCHA_SITE_KEY ? (
-            <ReCAPTCHA
-              ref={captchaRef}
-              sitekey={process.env.GOOGLE_RECAPTCHA_SITE_KEY}
-            />
-          ) : (
-            ""
-          )}
-
-          <Button
-            classname="about__contact-submit-btn"
-            type="submit"
-            disabled={submitting}
+        <div className={modalClassName} style={{ top: `${scrollY}px` }}>
+          <form
+            method="POST"
+            onSubmit={onSubmit}
+            className="about__contact-form"
           >
-            {sendBtnText}
-          </Button>
-        </form>
+            <h2>Say hello 🙂</h2>
+            <p>{contactError}</p>
+            <input
+              type="text"
+              id="about__contact-input-name"
+              name="name"
+              required={true}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              placeholder="name"
+            />
+            <input
+              type="text"
+              id="about__contact-input-email"
+              name="email"
+              required={true}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              placeholder="email"
+            />
+            <textarea
+              id="about__contact-input-message"
+              name="message"
+              required={true}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
+              placeholder="message"
+            />
+            {process.env.GOOGLE_RECAPTCHA_SITE_KEY ? (
+              <ReCAPTCHA
+                ref={captchaRef}
+                sitekey={process.env.GOOGLE_RECAPTCHA_SITE_KEY}
+              />
+            ) : (
+              ""
+            )}
+
+            <Button
+              classname="about__contact-submit-btn"
+              type="submit"
+              disabled={submitting}
+            >
+              {sendBtnText}
+            </Button>
+          </form>
+        </div>
 
         <div className="about__info">
           <h1>{AboutData.about.h1}</h1>

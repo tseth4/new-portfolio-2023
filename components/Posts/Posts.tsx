@@ -1,22 +1,28 @@
 import PostsData from "@/data/posts.json";
 import Link from "next/link";
+import Image from "next/image";
 
 import "./PostsStyles.scss";
 
 interface PostProps {
-  posts: "all" | number;
+  numberOfPosts: "all" | number;
   pathname?: string;
 }
 
-export default function Posts({ posts, pathname }: PostProps) {
-
-  let posts_length: number = posts === "all" ? PostsData.posts.length : posts;
+export default function Posts({ numberOfPosts, pathname }: PostProps) {
+  let posts_length: number =
+    numberOfPosts === "all" ? PostsData.posts.length : numberOfPosts;
   return (
     <div className="posts">
       {PostsData.posts.slice(0, posts_length).map((post, index) => (
         <div className="posts__card" key={index}>
+          <div className="posts__card-preview-img">
+            <Image fill={true} src={post?.preview_image} alt="Preview image" />
+          </div>
           <div className="posts__card-title">{post.title}</div>
-          <div className="posts__card-content">{post.preview_content}</div>
+          <div className="posts__card-content">
+            {post.preview_content.split(" ").slice(0, 10).join(" ")}
+          </div>
           <div className="posts__card-date-container">
             <div className="posts__card-date">{post.date}</div>
             <span>•</span>

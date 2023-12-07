@@ -15,9 +15,9 @@
     gap: 1.25em;
     width: fit-content;
     align-items: center;
-    // z-index: 1;
+    z-index: 1;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-desktop) {
       flex-direction: column;
       bottom: 0;
       width: var(--side-nav-width);
@@ -41,7 +41,7 @@
       //   color: var(--nav-primary-text--color);
       // }
 
-      @media (min-width: $breakpoint-tablet) {
+      @media (min-width: $breakpoint-desktop) {
         gap: 1.5rem;
         flex-direction: row;
         height: fit-content;
@@ -59,7 +59,7 @@
         font-weight: 500;
         cursor: pointer;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-desktop) {
           order: unset;
 
         }
@@ -83,7 +83,7 @@
         display: none;
 
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-desktop) {
           display: block;
           height: 7rem;
           height: 0;
@@ -156,6 +156,7 @@
       img {
         height: 1.3rem;
         width: 1.3rem;
+
         &:hover {
           animation: pulse 0.5s ease-in infinite;
         }
