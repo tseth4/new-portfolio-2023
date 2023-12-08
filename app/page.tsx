@@ -1,7 +1,6 @@
 "use client";
 import "./HomeStyles.scss";
 import NavSide from "@/components/Nav/NavSide";
-// import Splash from "@/components/Splash/Splash";
 import Posts from "@/components/Posts/Posts";
 import About from "@/components/About/About";
 import {
@@ -12,7 +11,6 @@ import {
   useState,
   useLayoutEffect,
 } from "react";
-// import useOnScreen from "@/hooks/useOnScreen";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Splash2 from "@/components/Splash/Splash2";
@@ -23,8 +21,6 @@ export interface OberserverTypes {
 }
 
 export default function Home() {
-  // const navRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
-
   const [localRefs, setLocalRefs] = useState<OberserverTypes>({});
 
   const postsRef = useRef<null | HTMLDivElement>(null);
@@ -44,7 +40,6 @@ export default function Home() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     let refsArr = Object.values(localRefs);
-    // let socialIcons = document.querySelectorAll(".footer__social-icons");
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ defaults: { duration: 0.5 } });
 
@@ -58,9 +53,7 @@ export default function Home() {
         .to(".footer__github", { top: 0 }, 0.9)
         .to(".footer__codepen", { top: 0 }, 1)
         .to(".footer__linkedin", { top: 0 }, 1.1);
-      // socialIcons.forEach((el, index) => {
-      //   tl.current?.to(el.className, { top: 0 });
-      // });
+
       refsArr.forEach((section, index) => {
         ScrollTrigger.create({
           trigger: section.current,
@@ -105,12 +98,7 @@ export default function Home() {
 
   return (
     <main ref={homeRef} className="home">
-      {/* <div className="home__bg"></div> */}
-      <NavSide
-        // ref={navRef}
-        // isOnScreen={isOnScreen}
-        handleNavigation={handleNavigation}
-      />
+      <NavSide handleNavigation={handleNavigation} />
       <div
         data-ref="splash"
         ref={splashRef}
