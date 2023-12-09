@@ -119,6 +119,7 @@
       justify-content: flex-start;
     }
   }
+
   &__contact-form {
     border-radius: 1rem;
 
@@ -187,6 +188,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    max-width: 533px;
     // border: 2px solid white;
     padding: 2.5rem;
     justify-content: flex-end;
