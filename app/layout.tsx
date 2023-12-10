@@ -4,8 +4,8 @@ import NavTop from "@/components/Nav/NavTop";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Tristan's homebase 🙂",
-  description: "Tristan Setha's homebase 🙂",
+  title: "Tristan's homebase",
+  description: "Tristan Setha's homebase",
 };
 
 export default function RootLayout({
