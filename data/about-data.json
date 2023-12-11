@@ -14,7 +14,7 @@
         },
         "href": "https://www.linkedin.com/in/tristansetha/",
         "src": "/social_icons/linkedin.svg",
-        "alt": "linkedin icon",
+        "alt": "View my Linkedin profile",
         "class": "about__social-links-icon"
       },
       {
@@ -25,7 +25,7 @@
         },
         "href": "https://codepen.io/tttristan",
         "src": "/social_icons/codepen.svg",
-        "alt": "codepen icon",
+        "alt": "See codepens",
         "class": "about__social-links-icon"
       },
       {
@@ -36,7 +36,7 @@
         },
         "href": "https://github.com/tseth4",
         "src": "/social_icons/github.svg",
-        "alt": "github icon",
+        "alt": "View my Github profile",
         "class": "about__social-links-icon"
       },
       {
@@ -47,7 +47,7 @@
         },
         "href": "https://drive.google.com/file/d/1n7vjQXCc2-tcerpcxyn-rn4ioozdDpaa/view?usp=sharing",
         "src": "/social_icons/cv.svg",
-        "alt": "cv icon",
+        "alt": "View my CV",
         "class": "about__social-links-icon"
       }
     ]
