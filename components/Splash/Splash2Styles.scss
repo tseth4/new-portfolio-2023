@@ -20,8 +20,8 @@
   &__name,
   &__description {
     position: relative;
-    top: 10vh;
-    opacity: 0;
+    top: 0;
+    opacity: 1;
 
     span {
       font-weight: 800;
@@ -34,6 +34,7 @@
     font-weight: 800;
     font-family: var(--header-font);
     color: var(--splash-name-color);
+    font-style: italic;
 
     @media (min-width: $breakpoint-tablet) {
       font-size: 5rem;

@@ -43,7 +43,7 @@ $item_padding: 0 10%;
       gap: 0.4rem;
       height: fit-content;
       display: grid;
-      grid-template-rows: 4fr 1fr 0.5fr 0.5fr;
+      grid-template-rows: 4fr min-content 0.5fr 0.5fr;
 
       // &:nth-child(3),
       // &:nth-child(4) {
@@ -57,7 +57,7 @@ $item_padding: 0 10%;
 
     &-title {
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-family: var(--header-font);
       color: var(--primary-header-text-color);
       // padding: $item_padding;

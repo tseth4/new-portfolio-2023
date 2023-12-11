@@ -3,13 +3,7 @@ import "./HomeStyles.scss";
 import NavSide from "@/components/Nav/NavSide";
 import Posts from "@/components/Posts/Posts";
 import About from "@/components/About/About";
-import {
-  useRef,
-  RefObject,
-  useEffect,
-  useState,
-  useLayoutEffect,
-} from "react";
+import { useRef, RefObject, useEffect, useState, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Splash2 from "@/components/Splash/Splash2";
@@ -41,9 +35,17 @@ export default function Home() {
     let refsArr = Object.values(localRefs);
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ defaults: { duration: 0.5 } });
-
+      tl.current.set(".nav-side__rectangle-shape", { height: "0rem" })
+        .set(".nav-side__rectangle-title", { opacity: 0 })
+        .set(".splash2__intro", { top: "10vh", opacity: 0})
+        .set(".splash2__name", { top: "10vh", opacity: 0})
+        .set(".splash2__description", { top: "10vh", opacity: 0})
+        .set(".footer__cv", { top: "10vh" } )
+        .set(".footer__github", { top: "10vh" } )
+        .set(".footer__codepen", { top: "10vh" })
+        .set(".footer__linkedin", { top: "10vh" } );
       tl.current
-        .to(".nav-side__rectangle-shape", { height: "7rem" }, 0)
+        .to(".nav-side__rectangle-shape", { height: "7rem" }, 0.25)
         .to(".nav-side__rectangle-title", { opacity: 1 }, 0.5)
         .to(".splash2__intro", { top: 0, opacity: 1, duration: 0.4 }, 0.5)
         .to(".splash2__name", { top: 0, opacity: 1, duration: 0.4 }, 0.6)
