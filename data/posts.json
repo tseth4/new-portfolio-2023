@@ -259,7 +259,7 @@
       "tags": [
         "project"
       ],
-      "preview_content": "A simple UI that utilizes Github api to search for users.",
+      "preview_content": "A simple UI to search for Github users",
       "post_content": [
         {
           "type": "p",
