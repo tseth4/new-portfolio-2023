@@ -259,7 +259,7 @@
       "tags": [
         "project"
       ],
-      "preview_content": "A simple pomodoro timer.",
+      "preview_content": "A simple UI that utilizes Github api to search for users.",
       "post_content": [
         {
           "type": "p",
