@@ -109,7 +109,7 @@ export default function Home() {
         <Splash2 />
       </div>
       <div data-ref="posts" ref={postsRef} id="posts" className="home__posts">
-        <Posts numberOfPosts={4} />
+        <Posts numberOfPosts={2} />
       </div>
       <div data-ref="about" ref={aboutRef} id="about" className="home__about">
         <About />

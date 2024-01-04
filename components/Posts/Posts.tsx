@@ -24,15 +24,17 @@ export default function Posts({ numberOfPosts }: PostProps) {
           <div className="posts__card-preview-img">
             <Image fill={true} src={post?.preview_image} alt="Preview image" />
           </div>
-          <div className="posts__card-title">{post.title}</div>
-          <div className="posts__card-content">
-            {post.preview_content.split(" ").slice(0, 10).join(" ")}
-          </div>
-          <div className="posts__card-date-container">
-            <div className="posts__card-date">{post.date}</div>
-            <span>•</span>
-            <div className="posts__card-readmore">
-              <Link href={"/posts/?index=" + index}>Read More</Link>
+          <div className="posts__card-info-container">
+            <div className="posts__card-title">{post.title}</div>
+            <div className="posts__card-content">
+              {post.preview_content.split(" ").slice(0, 10).join(" ")}
+            </div>
+            <div className="posts__card-date-container">
+              <div className="posts__card-date">{post.date}</div>
+              <span>•</span>
+              <div className="posts__card-readmore">
+                <Link href={"/posts/?index=" + index}>Read More</Link>
+              </div>
             </div>
           </div>
         </div>
