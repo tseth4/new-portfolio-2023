@@ -13,6 +13,9 @@ import {
 export const metadata: Metadata = {
   title: "Tristan's homebase",
   description: "Tristan Setha's homebase",
+  openGraph: {
+    images: "/tristan_space_home.png"
+  }
 };
 
 const playFairDisplay = Playfair_Display({
