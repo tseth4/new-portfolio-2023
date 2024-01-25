@@ -1,5 +1,6 @@
 body[data-theme='atmosphere'] {
   // --activeTheme: url("/atmosphere.png");
+  background-color: #151515;
 }
 
 body[data-theme='dark'] {
@@ -22,5 +23,6 @@ body[data-theme='light'] {
   z-index: -1;
   &__atmosphere {
     // position: absolute;
+    opacity: 0.5;
   }
 }

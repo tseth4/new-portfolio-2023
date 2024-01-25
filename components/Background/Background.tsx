@@ -15,7 +15,7 @@ export default function Background(props: BackgroundTypes) {
             <Image
               priority
               fill={true}
-              src={"/atmosphere.png"}
+              src={"/mybackground2.png"}
               alt="Background image"
             />
           </div>

@@ -16,7 +16,7 @@ export interface OberserverTypes {
 export default function Home() {
   const [localRefs, setLocalRefs] = useState<OberserverTypes>({});
 
-  const postsRef = useRef<null | HTMLDivElement>(null);
+  // const postsRef = useRef<null | HTMLDivElement>(null);
   const aboutRef = useRef<null | HTMLDivElement>(null);
   const splashRef = useRef<null | HTMLDivElement>(null);
   const homeRef = useRef<null | HTMLDivElement>(null);
@@ -26,24 +26,29 @@ export default function Home() {
     setLocalRefs({
       splashRef,
       aboutRef,
-      postsRef,
+      // postsRef,
     });
-  }, [splashRef, aboutRef, postsRef]);
+  }, [
+    splashRef,
+    aboutRef,
+    // postsRef
+  ]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     let refsArr = Object.values(localRefs);
     const ctx = gsap.context(() => {
       tl.current = gsap.timeline({ defaults: { duration: 0.5 } });
-      tl.current.set(".nav-side__rectangle-shape", { height: "0rem" })
+      tl.current
+        .set(".nav-side__rectangle-shape", { height: "0rem" })
         .set(".nav-side__rectangle-title", { opacity: 0 })
-        .set(".splash2__intro", { top: "10vh", opacity: 0})
-        .set(".splash2__name", { top: "10vh", opacity: 0})
-        .set(".splash2__description", { top: "10vh", opacity: 0})
-        .set(".footer__cv", { top: "10vh" } )
-        .set(".footer__github", { top: "10vh" } )
+        .set(".splash2__intro", { top: "10vh", opacity: 0 })
+        .set(".splash2__name", { top: "10vh", opacity: 0 })
+        .set(".splash2__description", { top: "10vh", opacity: 0 })
+        .set(".footer__cv", { top: "10vh" })
+        .set(".footer__github", { top: "10vh" })
         .set(".footer__codepen", { top: "10vh" })
-        .set(".footer__linkedin", { top: "10vh" } );
+        .set(".footer__linkedin", { top: "10vh" });
       tl.current
         .to(".nav-side__rectangle-shape", { height: "7rem" }, 0.25)
         .to(".nav-side__rectangle-title", { opacity: 1 }, 0.5)
@@ -108,9 +113,9 @@ export default function Home() {
       >
         <Splash2 />
       </div>
-      <div data-ref="posts" ref={postsRef} id="posts" className="home__posts">
+      {/* <div data-ref="posts" ref={postsRef} id="posts" className="home__posts">
         <Posts numberOfPosts={2} />
-      </div>
+      </div> */}
       <div data-ref="about" ref={aboutRef} id="about" className="home__about">
         <About />
       </div>
