@@ -15,6 +15,9 @@ export default function Background(props: BackgroundTypes) {
             <Image
               priority
               fill={true}
+              // width={100}
+              // height={100}
+              // style={{objectFit: "cover"}}
               src={"/mybackground2.png"}
               alt="Background image"
             />

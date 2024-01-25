@@ -21,8 +21,15 @@ body[data-theme='light'] {
   background: var(--activeTheme);
   background-size: cover;
   z-index: -1;
+
   &__atmosphere {
     // position: absolute;
+    // position: relative;
     opacity: 0.5;
+    // object-fit: cover;
+
+    img {
+      object-fit: cover
+    }
   }
 }
