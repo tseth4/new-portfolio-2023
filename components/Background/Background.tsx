@@ -18,8 +18,8 @@ export default function Background(props: BackgroundTypes) {
               // width={100}
               // height={100}
               // style={{objectFit: "cover"}}
-              src={"/mybackground2.png"}
-              // src={"/atmosphere.png"}
+              // src={"/mybackground2.png"}
+              src={"/atmosphere.png"}
               alt="Background image"
             />
           </div>
