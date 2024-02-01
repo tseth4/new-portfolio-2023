@@ -16,7 +16,7 @@ export interface OberserverTypes {
 export default function Home() {
   const [localRefs, setLocalRefs] = useState<OberserverTypes>({});
 
-  // const postsRef = useRef<null | HTMLDivElement>(null);
+  const postsRef = useRef<null | HTMLDivElement>(null);
   const aboutRef = useRef<null | HTMLDivElement>(null);
   const splashRef = useRef<null | HTMLDivElement>(null);
   const homeRef = useRef<null | HTMLDivElement>(null);
@@ -26,12 +26,12 @@ export default function Home() {
     setLocalRefs({
       splashRef,
       aboutRef,
-      // postsRef,
+      postsRef,
     });
   }, [
     splashRef,
     aboutRef,
-    // postsRef
+    postsRef
   ]);
 
   useLayoutEffect(() => {
@@ -113,9 +113,9 @@ export default function Home() {
       >
         <Splash2 />
       </div>
-      {/* <div data-ref="posts" ref={postsRef} id="posts" className="home__posts">
+      <div data-ref="posts" ref={postsRef} id="posts" className="home__posts">
         <Posts numberOfPosts={2} />
-      </div> */}
+      </div>
       <div data-ref="about" ref={aboutRef} id="about" className="home__about">
         <About />
       </div>

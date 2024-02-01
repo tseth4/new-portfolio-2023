@@ -5,6 +5,10 @@
       "route": "#splash"
     },
     {
+      "title": "posts",
+      "route": "#posts"
+    },
+    {
       "title": "about",
       "route": "#about"
     }

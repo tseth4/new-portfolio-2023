@@ -25,7 +25,7 @@
           "type": "p",
           "header": "Project Goal",
           "header_type": "h2",
-          "element_content": "Develop a new kiosk application for the AWS re:Invent Superhero Personality Test — a seven-question interactive quiz designed to determine which superhero a user aligns with the most. The project will be showcased at the re:Invent 2023 event in collaboration with AWS Analytics."
+          "element_content": "Develop a new website and an experience for the AWS re:Invent Superhero Personality Test — a seven-question interactive quiz designed to determine which superhero a user aligns with the most. The project will be showcased at the re:Invent 2023 event in collaboration with AWS Analytics."
         },
         {
           "type": "img",
@@ -144,6 +144,12 @@
             "post__content-schedule-page-desktop",
             "post__content-schedule-page-mobile"
           ]
+        },
+        {
+          "type": "p",
+          "header": "Technologies",
+          "header_type": "h2",
+          "element_content": "The website was developed using EAS’s internal tooling, which incorporates Gulp.js, PHP, Node.js, Sass, the GreenSock Animation Library, and HTML5 Web Components."
         }
       ]
     },
