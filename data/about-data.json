@@ -38,17 +38,6 @@
         "src": "/social_icons/github.svg",
         "alt": "View my Github profile",
         "class": "about__social-links-icon"
-      },
-      {
-        "name": "cv",
-        "size": {
-          "width": 20,
-          "height": 20
-        },
-        "href": "https://drive.google.com/file/d/1yTHWIXhzRro_yAbE5YKF2hr1cJTmk7-Y/view?usp=sharing",
-        "src": "/social_icons/cv.svg",
-        "alt": "View my CV",
-        "class": "about__social-links-icon"
       }
     ]
   }
