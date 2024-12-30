@@ -5,8 +5,8 @@
       "route": "#splash"
     },
     {
-      "title": "posts",
-      "route": "#posts"
+      "title": "projects",
+      "route": "#projects"
     },
     {
       "title": "about",

@@ -1,6 +1,96 @@
 {
   "posts": [
     {
+      "title": "Home Price Prediction App",
+      "author": "Tristan Setha",
+      "date": "2024-12-30",
+      "preview_image": "/hppa.png",
+      "header_image": "/hppa.png",
+      "preview_content": "Built a full-stack web application to predict home prices using a Random Forest Regressor model.",
+      "tags": ["project"],
+      "post_content": [
+        {
+          "type": "p",
+          "header": "Introduction",
+          "header_type": "h2",
+          "element_content": "The Home Price Prediction App predicts home prices using machine learning, built with Python, Flask, React, and TypeScript."
+        },
+        {
+          "type": "p",
+          "element_content": "The app preprocesses a large dataset (~2,000,000 rows), handling missing values, encoding categorical variables, and scaling features to optimize the Random Forest Regressor model performance."
+        },
+        {
+          "type": "p",
+          "header": "Deployment",
+          "header_type": "h2",
+          "element_content": "The project is deployed on GitHub Pages and AWS Elastic Beanstalk, with CloudFront ensuring secure and efficient delivery."
+        },
+        {
+          "type": "p",
+          "class": "post__content-links",
+          "header": "Links",
+          "header_type": "h2",
+          "element_content": "<a href='https://tseth4.github.io/house-price-prediction-app'>- Live site</a><br><a href='https://github.com/tseth4/house-price-prediction-app'>- Repo</a>"
+        }
+      ]
+    },
+    {
+      "title": "Class Roster Application",
+      "author": "Tristan Setha",
+      "date": "2024-12-30",
+      "preview_image": "/c867.png",
+      "header_image": "/c867.png",
+      "preview_content": "Developed a CLI program to manage student records using object-oriented programming principles.",
+      "tags": ["project"],
+      "post_content": [
+        {
+          "type": "p",
+          "header": "Introduction",
+          "header_type": "h2",
+          "element_content": "The Class Roster Application is a CLI program designed to manage student records using C++ and object-oriented principles."
+        },
+        {
+          "type": "p",
+          "element_content": "Key features include email validation, average course duration calculation, and grouping students by degree program."
+        },
+        {
+          "type": "p",
+          "class": "post__content-links",
+          "header": "Links",
+          "header_type": "h2",
+          "element_content": "<br><a href='https://github.com/tseth4/class-roster'>- Repo</a>"
+        }
+      ]
+    },
+    {
+      "title": "WGUPS Routing Program",
+      "author": "Tristan Setha",
+      "date": "2024-12-30",
+      "preview_image": "/miles.png",
+      "header_image": "/miles.png",
+      "preview_content": "Developed a package routing system delivering 40+ packages daily on time.",
+      "tags": ["project"],
+      "post_content": [
+        {
+          "type": "p",
+          "header": "Introduction",
+          "header_type": "h2",
+          "element_content": "The WGUPS Routing Program is a package routing system developed in Python to ensure timely delivery of over 40 packages daily."
+        },
+        {
+          "type": "p",
+          "element_content": "The program optimizes delivery routes using the Nearest Neighbor Algorithm while managing deadlines, truck capacity, and address corrections."
+        },
+        {
+          "type": "p",
+          "class": "post__content-links",
+          "header": "Links",
+          "header_type": "h2",
+          "element_content": "<br><a href='https://github.com/tseth4/wgups-routing-program'>- Repo</a>"
+        }
+      ]
+    },
+    {
       "title": "AWS re:Invent",
       "author": "Tristan Setha",
       "date": "2023-10-23",

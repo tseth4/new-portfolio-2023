@@ -41,7 +41,7 @@ export default function Posts({ numberOfPosts }: PostProps) {
       ))}
       {pathname != "/posts/all" ? (
         <div className="posts__all">
-          <Link href="/posts/all">POSTS</Link>
+          <Link href="/posts/all">ALL</Link>
           <div className="posts__all-arrow"></div>
         </div>
       ) : (
