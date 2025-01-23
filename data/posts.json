@@ -1,6 +1,52 @@
 {
   "posts": [
     {
+      "title": "Movie Analytics Dashboard (Ongoing)",
+      "author": "Tristan Setha",
+      "date": "2025-01-22",
+      "preview_image": "/ma.png",
+      "header_image": "/ma.png",
+      "preview_content": "Built a full-stack Movie Analytics Dashboard to explore trends and provide personalized recommendations.",
+      "tags": ["project", "data visualization", "analytics"],
+      "post_content": [
+        {
+          "type": "p",
+          "header": "Introduction",
+          "header_type": "h2",
+          "element_content": "The Movie Analytics Dashboard is a comprehensive platform for exploring movies and trends. The dashboard provides advanced filtering, and analytics to help users gain insights into movies."
+        },
+        {
+          "type": "p",
+          "element_content": "The project leverages a real-world movie dataset and integrates backend and frontend technologies to showcase data-driven decision-making capabilities."
+        },
+        {
+          "type": "p",
+          "header": "Features",
+          "header_type": "h2",
+          "element_content": "<ul><li>Search and filtering capabilities for movies</li><li>Analytics dashboard showing trends and statistics</li><li>REST API with Swagger/OpenAPI documentation</li></ul>"
+        },
+        {
+          "type": "p",
+          "header": "Technologies",
+          "header_type": "h2",
+          "element_content": "<div><span>.NET Core Web API</span>, <span>Entity Framework Core</span>, <span>SQLite</span>, <span>React</span>, <span>Tailwind, Shadcn/UI</span>, <span>xUnit</span></div>"
+        },
+        {
+          "type": "p",
+          "header": "Deployment",
+          "header_type": "h2",
+          "element_content": "The project is deployed on Azure, utilizing Azure App Services."
+        },
+        {
+          "type": "p",
+          "class": "post__content-links",
+          "header": "Links",
+          "header_type": "h2",
+          "element_content": "<a href='https://movie-analytics-app-c5cfb3g0htgvg9hv.canadacentral-01.azurewebsites.net/'>- Live site</a><br><a href='https://github.com/tseth4/MovieAnalytics'>- Repo</a>"
+        }
+      ]
+    },
+    {
       "title": "Home Price Prediction App",
       "author": "Tristan Setha",
       "date": "2024-12-30",
