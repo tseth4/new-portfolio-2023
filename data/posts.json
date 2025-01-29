@@ -6,7 +6,7 @@
       "date": "2025-01-22",
       "preview_image": "/ma.png",
       "header_image": "/ma.png",
-      "preview_content": "Built a full-stack Movie Analytics Dashboard to explore trends and provide personalized recommendations.",
+      "preview_content": "Built a full-stack Movie Analytics Dashboard to explore trends.",
       "tags": ["project", "data visualization", "analytics"],
       "post_content": [
         {
@@ -52,7 +52,7 @@
       "date": "2024-12-30",
       "preview_image": "/hppa.png",
       "header_image": "/hppa.png",
-      "preview_content": "Built a full-stack web application to predict home prices using a Random Forest Regressor model.",
+      "preview_content": "Predict home prices using a Random Forest Regressor model.",
       "tags": ["project"],
       "post_content": [
         {
@@ -86,7 +86,7 @@
       "date": "2024-12-30",
       "preview_image": "/c867.png",
       "header_image": "/c867.png",
-      "preview_content": "Developed a CLI program to manage student records using object-oriented programming principles.",
+      "preview_content": "Developed a C++ CLI program to manage student records.",
       "tags": ["project"],
       "post_content": [
         {
@@ -114,7 +114,7 @@
       "date": "2024-12-30",
       "preview_image": "/miles.png",
       "header_image": "/miles.png",
-      "preview_content": "Developed a package routing system delivering 40+ packages daily on time.",
+      "preview_content": "Developed a package routing system delivering 40+ packages.",
       "tags": ["project"],
       "post_content": [
         {
