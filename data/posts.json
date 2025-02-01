@@ -175,12 +175,6 @@
           "image_class": [
             "post__content-tdecu"
           ]
-        },
-        {
-          "type": "p",
-          "header": "Technologies",
-          "header_type": "h2",
-          "element_content": "The application was built using a stack that includes Google Maps API, Gulp.js, PHP, Node.js, Sass, and HTML5 Web Components."
         }
       ]
     },
